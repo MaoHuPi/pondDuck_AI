@@ -361,7 +361,7 @@ class mlModel{
     }
 }
 function newDuck(){
-    var model = mlModel.random([10, 1, 5]);
+    var model = mlModel.random([11, 1, 6]);
     return(model.pack());
 }
 function mlduck_main(){
@@ -389,12 +389,12 @@ function mlduck_main(){
 let scanDeg = 0;
 let swimDeg = 0;
 let cannonDeg = 0;
+let cannonRange = 0;
 let isSwimming = false;
 let toCannon = false;
-let duck = mlModel.load(${JSON.stringify(duckNow)});
-log(getX());
+// let duck = mlModel.load(${JSON.stringify(duckNow)});
+let duck = new mlModel({architecture: [11, 6]});
 while(true){
-    log(getX());
     let response = duck.calculate(
         getX(), 
         getY(), 
@@ -405,27 +405,29 @@ while(true){
         damage(), 
         health(), 
         speed(), 
-        cannonDeg
+        cannonDeg, 
+        cannonRange
     );
     scanDeg = Math.floor(response[0] * 360);
     swimDeg = Math.floor(response[1] * 360);
     // isSwimming = response[2] > 0.5 ? true : false;
     isSwimming = true;
     cannonDeg = Math.floor(response[3] * 360);
-    toCannon = response[4] > 0.5 ? true : false;
+    cannonDeg = Math.floor(response[4] * 100);
+    toCannon = response[5] > 0.5 ? true : false;
+    [1e3, scanDeg, swimDeg, cannonDeg, cannonRange, isSwimming ? 1 : 0, toCannon ? 1 : 0].forEach(n => {
+        log(n);
+    });
     if(isSwimming){
         swim(swimDeg);
     }
     else{
         stop();
     }
+    log(getX());
     if(toCannon){
-        cannon(cannonDeg);
+        cannon(cannonDeg, cannonRange);
     }
-
-    [scanDeg, swimDeg, cannonDeg, isSwimming ? 1 : 0, toCannon ? 1 : 0].forEach(n => {
-        log(n);
-    });
 }
     `;
     be().setValue(myCode); // 設定ace editor內容

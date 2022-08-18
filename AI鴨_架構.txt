@@ -8,11 +8,13 @@
 < health: float
 < speed: float
 < cannon deg: int
+< cannon range: int
 
 > scan deg: int
 > swim deg: int
 > stop: bool
 > cannon deg: int
+> cannon range: int
 > cannon: bool
 
 scan(deg) 掃描
