@@ -1,0 +1,24 @@
+< position x: float
+< position y: float
+< scan deg: int
+< scan resoult: float
+< swim deg: int
+< is swimming: bool
+
+> scan deg: int
+> swim deg: int
+> stop: bool
+
+scan(deg) 掃描
+cannon(deg, range) 射擊
+drive(deg) 游泳，同swim
+swim(deg) 游泳
+stop() 停止游泳
+speed() 獲取移動速度
+damage() 獲取總扣血量
+health() 獲取剩餘血量
+loc_x() 獲取X座標?
+getX() 獲取X座標
+loc_y() 獲取Y座標?
+getY() 獲取Y座標
+log(any) 印出
