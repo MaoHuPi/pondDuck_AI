@@ -30,3 +30,5 @@ getX() 獲取X座標
 loc_y() 獲取Y座標?
 getY() 獲取Y座標
 log(any) 印出
+
+目前問題：因為場地為非同步執行，導致AI鴨無法在一幀內完成運算(需研究「pond/duck/generated/en/compressed.js」到底在寫三小)

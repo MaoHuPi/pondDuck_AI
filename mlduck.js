@@ -393,7 +393,7 @@ let cannonRange = 0;
 let isSwimming = false;
 let toCannon = false;
 // let duck = mlModel.load(${JSON.stringify(duckNow)});
-let duck = new mlModel({architecture: [11, 6]});
+let duck = new mlModel({architecture: [1, 6]});
 while(true){
     let response = duck.calculate(
         getX(), 
