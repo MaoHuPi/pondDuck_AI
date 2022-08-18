@@ -4,10 +4,16 @@
 < scan resoult: float
 < swim deg: int
 < is swimming: bool
+< damage: float
+< health: float
+< speed: float
+< cannon deg: int
 
 > scan deg: int
 > swim deg: int
 > stop: bool
+> cannon deg: int
+> cannon: bool
 
 scan(deg) 掃描
 cannon(deg, range) 射擊
