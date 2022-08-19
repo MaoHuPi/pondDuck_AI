@@ -372,6 +372,10 @@ function mlduck_main(){
      * note
      * $e(); // 運行程式
      * T.reset(); // 重置
+     * T // 遊戲場地物件(內涵遊戲所需變數及控制函數)
+     * T.$c // 鴨子物件陣列
+     * Ae(T.$c[0]); // 讓鴨子進入死亡狀態($c後的索引值為要殺死的鴨子)
+     * T.$c[0].FH // 鴨子compiled後的code
      */
     window.Uf(1); // 切換至JavaScript輸入
     if (!Qf) { // Vf(); // 啟用JavaScript編輯
@@ -392,9 +396,9 @@ let cannonDeg = 0;
 let cannonRange = 0;
 let isSwimming = false;
 let toCannon = false;
-// let duck = mlModel.load(${JSON.stringify(duckNow)});
-let duck = new mlModel({architecture: [1, 6]});
-while(true){
+let duck = mlModel.load(${JSON.stringify(duckNow)});
+// let duck = eval('new mlModel({architecture: [1, 6]})');
+function mlCalculate(){
     let response = duck.calculate(
         getX(), 
         getY(), 
@@ -410,8 +414,8 @@ while(true){
     );
     scanDeg = Math.floor(response[0] * 360);
     swimDeg = Math.floor(response[1] * 360);
-    // isSwimming = response[2] > 0.5 ? true : false;
-    isSwimming = true;
+    isSwimming = response[2] > 0.5 ? true : false;
+    // isSwimming = true;
     cannonDeg = Math.floor(response[3] * 360);
     cannonDeg = Math.floor(response[4] * 100);
     toCannon = response[5] > 0.5 ? true : false;
@@ -429,8 +433,16 @@ while(true){
         cannon(cannonDeg, cannonRange);
     }
 }
+while(true){
+    mlCalculate();
+}
     `;
     be().setValue(myCode); // 設定ace editor內容
     Ye(new Event('click', {"bubbles":true, "cancelable":false})); // 運行程式
+    setTimeout(() => {
+        for(let i = 0; i < 100; i++){
+            T.$c[0].oC.run();
+        }
+    }, 0.1e3);
 }
 setTimeout(mlduck_main, 1e3);
