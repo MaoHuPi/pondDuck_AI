@@ -1,0 +1,9 @@
+### read.php
+GET http://127.0.0.1:8080/mlduck/read.php HTTP/1.1
+
+### write.php
+POST http://127.0.0.1:8080/mlduck/write.php? HTTP/1.1
+content-type: application/json
+{
+    "json": "[]"
+}
