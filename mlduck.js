@@ -377,7 +377,6 @@ function mlduck_main(){
     const codeTextarea = $('textarea.ace_text-input');
     const generationList = window.mlGenerationList = [];
 
-    /* method */
     function findUnexecute(generationIndex = 0){
         let unexecuteIndex = undefined;
         generationList[generationIndex].map((duckData, index) => {
@@ -400,6 +399,22 @@ function mlduck_main(){
             console.log(`${doneNum}/${totalNum} | ${progressBar}`);
         }
         return(doneNum != totalNum ? doneNum/totalNum : 1);
+    }
+
+    function proportionRandom(data = [{proportion: 1, value: false}]){
+        var proportionTotal = data
+            .map(object => object.proportion)
+            .reduce((sum, proportion) => sum + proportion, 0);
+        var randomResult = Math.floor(Math.random()*proportionTotal);
+        for(let i = 0; i < data.length; i++){
+            var proportion = data[i].proportion;
+            if(randomResult - proportion > 0){
+                randomResult -= proportion;
+            }
+            else{
+                return(data[i].value);
+            }
+        }
     }
 
     /* generation */
@@ -426,13 +441,43 @@ function mlduck_main(){
 
                 getProgress(true);
                 console.table(generationList[0].map(duckData => duckData.score));
-                
+
                 runGeneration(gi);
             });
         }
         else{
             return(true);
         }
+    }
+
+    function procreationGeneration(duckNum = 10, parentGenerationIndex = generationList.length - 1, deleteParentGeneration = false){
+        let proportionList = generationList[parentGenerationIndex].map(duckData => {
+            return({
+                proportion: duckData.score, 
+                value: duckData
+            });
+        });
+        let generationNow = [];
+        for(let i = 0; i < duckNum; i++){
+            let parent = [];
+            let child = newDuck();
+            parent[0] = proportionRandom(proportionList);
+            parent[1] = proportionRandom(proportionList.filter(object => object.value != parent[0]));
+            var layerMaxLength = Math.max(parent[0].arguments.length, parent[1].arguments.length)
+            for(let i = 0; i < layerMaxLength; i++){
+                if(parent[i%2].arguments.length < i + 1){
+                    break;
+                }
+                else{
+                    child.arguments[i] = parent[i%2].arguments[i];
+                }
+            }
+            generationNow.push(child);
+        }
+        if(deleteParentGeneration){
+            generationList.splice(parentGenerationIndex, 1);
+        }
+        generationList.push(generationNow);
     }
     
     /* execute */
@@ -522,14 +567,15 @@ function mlduck_main(){
         }, 0))
     }
     randomGeneration(0, 10);
-    // v
     runGeneration(0);
-    function a(){
+    function autoProcreation(){
         if(getProgress() == 1){
-
+            // console.table(generationList[0].map(duckData => duckData.score));
+            procreationGeneration(10, 0, true);
+            runGeneration(0);
         }
-        setTimeout(a, 1e3);
+        setTimeout(autoProcreation, 1e3);
     }
-    // ^
+    autoProcreation();
 }
 setTimeout(mlduck_main, 1e3);
