@@ -1,4 +1,5 @@
 'use strict';
+
 let code_duckRobot = `
 /*
  * 2022 © MaoHuPi
@@ -209,10 +210,12 @@ class mlModel{
 }
 `;
 
+const ML_DIR_PATH = 'mlduck';
+const ML_DEBUG_MODE = false;
+
 const mlIdList = [];
 class mlBasic{
     // static idList = [];
-    static DIR_PATH = 'mlduck';
     static getArg(args = {}, argName = '', defaultValue = false){
         return(argName in args ? args[argName] : defaultValue);
     }
@@ -491,10 +494,10 @@ function mlduck_main(){
                 generationList[gi][di].executed = true;
                 generationList[gi][di].score = mlBasic.time() - st;
 
-                getProgress(true);
-                console.table(generationList[0].map(duckData => duckData.score));
+                // getProgress(true);
+                // console.table(generationList[0].map(duckData => duckData.score));
 
-                sendXmlhttp(mlBasic.DIR_PATH + '/write.php', `json=${JSON.stringify({generationList: generationList, generationNumNow: window.mlGenerationNumNow}, true, 4)}`, r => {
+                sendXmlhttp(ML_DIR_PATH + '/write.php', `json=${JSON.stringify({generationList: generationList, generationNumNow: window.mlGenerationNumNow}, true, 4)}`, r => {
                     console.log(`data write: ${r}`);
                 }, 'post');
 
@@ -570,7 +573,9 @@ function mlduck_main(){
         cannonDeg = Math.floor(response[3] * 360);
         cannonRange = Math.floor(response[4] * 100);
         toCannon = response[5] > 0.5 ? true : false;
-        ['1e3', 'scanDeg', 'swimDeg', 'cannonDeg', 'cannonRange', 'isSwimming', 'toCannon'].forEach(n => {
+        clearLog();
+        getProgress(true);
+        ['scanDeg', 'swimDeg', 'cannonDeg', 'cannonRange', 'isSwimming', 'toCannon'].forEach(n => {
             log(\`\${n}: \${eval(n)}\`);
         });
         if(isSwimming){
@@ -604,10 +609,15 @@ function mlduck_main(){
             //     a.setProperty(c, name, a.createNativeFunction(d));
             // }
 
-            d = function(e) {
-                retunr(mlModel.load(e));
+            d = function() { // clearLog
+                if(!ML_DEBUG_MODE){
+                    console.clear();
+                }
             };
-            a.setProperty(c, "load", a.createNativeFunction(d));
+            a.setProperty(c, "clearLog", a.createNativeFunction(d));
+            
+            d = getProgress // getProgress
+            a.setProperty(c, "getProgress", a.createNativeFunction(d));
         };
 
         // Object.getPrototypeOf($('#display').getContext("2d")).fill = () => {console.log(this)}
@@ -642,7 +652,11 @@ function mlduck_main(){
     }
 
     /* main */
-    Audio.prototype.play = () => {}
+    Audio.prototype.play = () => {};
+    if(!ML_DEBUG_MODE){
+        console.warn = () => {};
+        console.error = () => {};
+    }
 
     // $('#docsButton').removeEventListener('click', Ue, true); // 移除click監聽器
     var docsButton = $('#docsButton');
@@ -664,7 +678,7 @@ function mlduck_main(){
         }, 0))
     }
 
-    sendXmlhttp(mlBasic.DIR_PATH + '/read.php', '', json => {
+    sendXmlhttp(ML_DIR_PATH + '/read.php', '', json => {
         let data = [];
         try{
             data = JSON.parse(json);
