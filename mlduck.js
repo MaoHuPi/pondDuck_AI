@@ -536,8 +536,29 @@ function mlduck_main(){
     }
         `;
         be().setValue(myCode); // 設定ace editor內容
+
+        let oldFunction = T.$c[0].Si.Ow;
+        let mlObjects = {mlBasic: mlBasic, mlPoint: mlPoint, mlLine: mlLine, mlModel: mlModel, newDuck: newDuck}
+        T.$c[0].Si.Ow = function(a, c, mlObj = mlObjects){ // 改寫、複寫 T.$c[0].Si.Ow 補充函式
+            oldFunction.bind(this)(a, c);
+            let d = function(e) {
+                console.log(`${T.kf.name} logs: ${e}`);
+            };
+            a.setProperty(c, "log", a.createNativeFunction(d));
+
+            // for(let name in mlObj){
+            //     d = (...arg) => {return(mlObj[name])};
+            //     a.setProperty(c, name, a.createNativeFunction(d));
+            // }
+
+            d = function(e) {
+                retunr(mlModel.load(e));
+            };
+            a.setProperty(c, "load", a.createNativeFunction(d));
+        };
+
         window.Ye(new Event('click', {"bubbles":true, "cancelable":false})); // 運行程式
-        // T.$c[0].oC = new Interpreter(myCode, T.$c[0].FH.Si.Ow); // 設定player的code
+        // T.$c[0].oC = new Interpreter(myCode, T.$c[0].Si.Ow); // 重建Interpreter，會因為myCode未經compile而導致鴨子不會動
         accelerate();
         reset(doneFunction);
     }
