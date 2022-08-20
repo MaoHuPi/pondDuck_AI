@@ -494,7 +494,7 @@ function mlduck_main(){
                 getProgress(true);
                 console.table(generationList[0].map(duckData => duckData.score));
 
-                sendXmlhttp(mlBasic.DIR_PATH + '/write.php', `json=${JSON.stringify(generationList, true, 4)}`, r => {
+                sendXmlhttp(mlBasic.DIR_PATH + '/write.php', `json=${JSON.stringify({generationList: generationList, generationNumNow: window.mlGenerationNumNow}, true, 4)}`, r => {
                     console.log(`data write: ${r}`);
                 }, 'post');
 
@@ -669,22 +669,23 @@ function mlduck_main(){
         try{
             data = JSON.parse(json);
         }catch(error){}
-        if(data.length >= 1 && data[0].length >= 2){
+        if(data.generationList && data.generationList.length >= 1 && data.generationList[0].length >= 2){
+            window.mlGenerationNumNow = data.generationNumNow ? data.generationNumNow : 1;
             generationList.length = 0;
-            for(let layer of data){
+            for(let layer of data.generationList){
                 generationList.push(layer);
             }
             runAll();
         }
         else{
             randomGeneration(0, 10);
+            window.mlGenerationNumNow = 1;
             runAll();
         }
     }, 'get');
 
     function runAll(){
         runGeneration(0);
-        window.mlGenerationNumNow = 1;
         function autoProcreation(){
             if(getProgress() == 1){
                 // console.table(generationList[0].map(duckData => duckData.score));
