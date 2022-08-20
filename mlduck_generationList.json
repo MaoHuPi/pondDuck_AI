@@ -1,0 +1,1664 @@
+[
+    [
+        {
+            "arguments": {
+                "layers": [
+                    [
+                        {
+                            "id": "jputy",
+                            "outputs": [
+                                {
+                                    "gate": 0.8050044951193507,
+                                    "output": "MjwnE"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "0k9QV",
+                            "outputs": [
+                                {
+                                    "gate": 0.8180513550468238,
+                                    "output": "MjwnE"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "wZuf0",
+                            "outputs": [
+                                {
+                                    "gate": 0.6497672466361804,
+                                    "output": "MjwnE"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "lnbVL",
+                            "outputs": [
+                                {
+                                    "gate": 0.9389805232018027,
+                                    "output": "MjwnE"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "qQYQZ",
+                            "outputs": [
+                                {
+                                    "gate": 0.28656829866397526,
+                                    "output": "MjwnE"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "FoAQD",
+                            "outputs": [
+                                {
+                                    "gate": 0.1783354974371929,
+                                    "output": "MjwnE"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "CU4Fp",
+                            "outputs": [
+                                {
+                                    "gate": 0.32166853111086646,
+                                    "output": "MjwnE"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "vEUw7",
+                            "outputs": [
+                                {
+                                    "gate": 0.9012910841348087,
+                                    "output": "MjwnE"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "JMwwm",
+                            "outputs": [
+                                {
+                                    "gate": 0.6897872707165866,
+                                    "output": "MjwnE"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "s6v6b",
+                            "outputs": [
+                                {
+                                    "gate": 0.326981785525007,
+                                    "output": "MjwnE"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "UJncR",
+                            "outputs": [
+                                {
+                                    "gate": 0.017478692974636667,
+                                    "output": "MjwnE"
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "MjwnE",
+                            "outputs": [
+                                {
+                                    "gate": 0.12696034551154556,
+                                    "output": "XbyEY"
+                                },
+                                {
+                                    "gate": 0.3605881993080742,
+                                    "output": "U24I7"
+                                },
+                                {
+                                    "gate": 0.17541218488646826,
+                                    "output": "9sOgZ"
+                                },
+                                {
+                                    "gate": 0.08771000175169719,
+                                    "output": "wpQGV"
+                                },
+                                {
+                                    "gate": 0.44780762185713785,
+                                    "output": "qw1QW"
+                                },
+                                {
+                                    "gate": 0.42876475980089457,
+                                    "output": "obKTI"
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "XbyEY",
+                            "outputs": []
+                        },
+                        {
+                            "id": "U24I7",
+                            "outputs": []
+                        },
+                        {
+                            "id": "9sOgZ",
+                            "outputs": []
+                        },
+                        {
+                            "id": "wpQGV",
+                            "outputs": []
+                        },
+                        {
+                            "id": "qw1QW",
+                            "outputs": []
+                        },
+                        {
+                            "id": "obKTI",
+                            "outputs": []
+                        }
+                    ]
+                ]
+            },
+            "score": 0,
+            "executed": false
+        },
+        {
+            "arguments": {
+                "layers": [
+                    [
+                        {
+                            "id": "TMRiK",
+                            "outputs": [
+                                {
+                                    "gate": 0.3257513166771906,
+                                    "output": "3jSF1"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "Ur6ma",
+                            "outputs": [
+                                {
+                                    "gate": 0.06689182394390025,
+                                    "output": "3jSF1"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "8Qq1h",
+                            "outputs": [
+                                {
+                                    "gate": 0.6949702443418067,
+                                    "output": "3jSF1"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "r4xUI",
+                            "outputs": [
+                                {
+                                    "gate": 0.2120247588924402,
+                                    "output": "3jSF1"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "ZDEIr",
+                            "outputs": [
+                                {
+                                    "gate": 0.2139854065193023,
+                                    "output": "3jSF1"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "0wikf",
+                            "outputs": [
+                                {
+                                    "gate": 0.5232996369996459,
+                                    "output": "3jSF1"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "oMxM4",
+                            "outputs": [
+                                {
+                                    "gate": 0.6854075325096567,
+                                    "output": "3jSF1"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "rr3Fe",
+                            "outputs": [
+                                {
+                                    "gate": 0.629661029061561,
+                                    "output": "3jSF1"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "q2KPp",
+                            "outputs": [
+                                {
+                                    "gate": 0.6875198773466547,
+                                    "output": "3jSF1"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "s2BOB",
+                            "outputs": [
+                                {
+                                    "gate": 0.3625910644822614,
+                                    "output": "3jSF1"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "CL2iO",
+                            "outputs": [
+                                {
+                                    "gate": 0.8422978201182041,
+                                    "output": "3jSF1"
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "3jSF1",
+                            "outputs": [
+                                {
+                                    "gate": 0.9681648953754041,
+                                    "output": "ZkGF0"
+                                },
+                                {
+                                    "gate": 0.2676441100937199,
+                                    "output": "mKWn3"
+                                },
+                                {
+                                    "gate": 0.22303660147770943,
+                                    "output": "24GMx"
+                                },
+                                {
+                                    "gate": 0.796404954146072,
+                                    "output": "NbNae"
+                                },
+                                {
+                                    "gate": 0.32074937244148294,
+                                    "output": "f0wEf"
+                                },
+                                {
+                                    "gate": 0.37765502955537533,
+                                    "output": "1eLVs"
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "ZkGF0",
+                            "outputs": []
+                        },
+                        {
+                            "id": "mKWn3",
+                            "outputs": []
+                        },
+                        {
+                            "id": "24GMx",
+                            "outputs": []
+                        },
+                        {
+                            "id": "NbNae",
+                            "outputs": []
+                        },
+                        {
+                            "id": "f0wEf",
+                            "outputs": []
+                        },
+                        {
+                            "id": "1eLVs",
+                            "outputs": []
+                        }
+                    ]
+                ]
+            },
+            "score": 0,
+            "executed": false
+        },
+        {
+            "arguments": {
+                "layers": [
+                    [
+                        {
+                            "id": "tVQBR",
+                            "outputs": [
+                                {
+                                    "gate": 0.4454210619045451,
+                                    "output": "0RBHZ"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "ZRwEX",
+                            "outputs": [
+                                {
+                                    "gate": 0.8094191737679162,
+                                    "output": "0RBHZ"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "EWG7o",
+                            "outputs": [
+                                {
+                                    "gate": 0.965241705146235,
+                                    "output": "0RBHZ"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "nVesI",
+                            "outputs": [
+                                {
+                                    "gate": 0.7715256203348635,
+                                    "output": "0RBHZ"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "WRQeg",
+                            "outputs": [
+                                {
+                                    "gate": 0.3190155491242792,
+                                    "output": "0RBHZ"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "6y7AX",
+                            "outputs": [
+                                {
+                                    "gate": 0.3255202507074464,
+                                    "output": "0RBHZ"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "ZUJDS",
+                            "outputs": [
+                                {
+                                    "gate": 0.960672851217039,
+                                    "output": "0RBHZ"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "ME4Mw",
+                            "outputs": [
+                                {
+                                    "gate": 0.9100411302711933,
+                                    "output": "0RBHZ"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "fnsUy",
+                            "outputs": [
+                                {
+                                    "gate": 0.887352346557863,
+                                    "output": "0RBHZ"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "MpVRT",
+                            "outputs": [
+                                {
+                                    "gate": 0.7691800367193704,
+                                    "output": "0RBHZ"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "IQm1X",
+                            "outputs": [
+                                {
+                                    "gate": 0.7479062791528897,
+                                    "output": "0RBHZ"
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "0RBHZ",
+                            "outputs": [
+                                {
+                                    "gate": 0.5776342149617704,
+                                    "output": "NfYVt"
+                                },
+                                {
+                                    "gate": 0.06522048634478339,
+                                    "output": "iBH54"
+                                },
+                                {
+                                    "gate": 0.5791714496198803,
+                                    "output": "eFCiQ"
+                                },
+                                {
+                                    "gate": 0.7726634322900059,
+                                    "output": "KpfQ3"
+                                },
+                                {
+                                    "gate": 0.14373048462123084,
+                                    "output": "Z2FIq"
+                                },
+                                {
+                                    "gate": 0.3756148990500354,
+                                    "output": "1Z6Uk"
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "NfYVt",
+                            "outputs": []
+                        },
+                        {
+                            "id": "iBH54",
+                            "outputs": []
+                        },
+                        {
+                            "id": "eFCiQ",
+                            "outputs": []
+                        },
+                        {
+                            "id": "KpfQ3",
+                            "outputs": []
+                        },
+                        {
+                            "id": "Z2FIq",
+                            "outputs": []
+                        },
+                        {
+                            "id": "1Z6Uk",
+                            "outputs": []
+                        }
+                    ]
+                ]
+            },
+            "score": 0,
+            "executed": false
+        },
+        {
+            "arguments": {
+                "layers": [
+                    [
+                        {
+                            "id": "8cQnL",
+                            "outputs": [
+                                {
+                                    "gate": 0.5803241980452802,
+                                    "output": "aUX2e"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "k6Txw",
+                            "outputs": [
+                                {
+                                    "gate": 0.4312562127343964,
+                                    "output": "aUX2e"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "C8cWw",
+                            "outputs": [
+                                {
+                                    "gate": 0.19257197330255038,
+                                    "output": "aUX2e"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "17tnS",
+                            "outputs": [
+                                {
+                                    "gate": 0.260377420815733,
+                                    "output": "aUX2e"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "LiXr0",
+                            "outputs": [
+                                {
+                                    "gate": 0.36138524832490804,
+                                    "output": "aUX2e"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "DDMDR",
+                            "outputs": [
+                                {
+                                    "gate": 0.9290066901463128,
+                                    "output": "aUX2e"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "Vtdh2",
+                            "outputs": [
+                                {
+                                    "gate": 0.20095938543559666,
+                                    "output": "aUX2e"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "IIojw",
+                            "outputs": [
+                                {
+                                    "gate": 0.6036975701189333,
+                                    "output": "aUX2e"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "mli66",
+                            "outputs": [
+                                {
+                                    "gate": 0.5400985645725105,
+                                    "output": "aUX2e"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "fc8wr",
+                            "outputs": [
+                                {
+                                    "gate": 0.08275795257874918,
+                                    "output": "aUX2e"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "KlrYn",
+                            "outputs": [
+                                {
+                                    "gate": 0.33993420396635377,
+                                    "output": "aUX2e"
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "aUX2e",
+                            "outputs": [
+                                {
+                                    "gate": 0.9576004156089357,
+                                    "output": "qHTP5"
+                                },
+                                {
+                                    "gate": 0.08788913919321706,
+                                    "output": "YqMb0"
+                                },
+                                {
+                                    "gate": 0.661401210921686,
+                                    "output": "uu05k"
+                                },
+                                {
+                                    "gate": 0.7879538901602883,
+                                    "output": "enhW3"
+                                },
+                                {
+                                    "gate": 0.5004979897912729,
+                                    "output": "8AIjI"
+                                },
+                                {
+                                    "gate": 0.9700342065778791,
+                                    "output": "TcsP7"
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "qHTP5",
+                            "outputs": []
+                        },
+                        {
+                            "id": "YqMb0",
+                            "outputs": []
+                        },
+                        {
+                            "id": "uu05k",
+                            "outputs": []
+                        },
+                        {
+                            "id": "enhW3",
+                            "outputs": []
+                        },
+                        {
+                            "id": "8AIjI",
+                            "outputs": []
+                        },
+                        {
+                            "id": "TcsP7",
+                            "outputs": []
+                        }
+                    ]
+                ]
+            },
+            "score": 0,
+            "executed": false
+        },
+        {
+            "arguments": {
+                "layers": [
+                    [
+                        {
+                            "id": "cIndX",
+                            "outputs": [
+                                {
+                                    "gate": 0.5587520722581945,
+                                    "output": "xM35X"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "IfIvn",
+                            "outputs": [
+                                {
+                                    "gate": 0.48109203253253674,
+                                    "output": "xM35X"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "JS4Qx",
+                            "outputs": [
+                                {
+                                    "gate": 0.8111185112642596,
+                                    "output": "xM35X"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "FjHyQ",
+                            "outputs": [
+                                {
+                                    "gate": 0.5418457082625034,
+                                    "output": "xM35X"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "Y2Gs7",
+                            "outputs": [
+                                {
+                                    "gate": 0.38453580783200114,
+                                    "output": "xM35X"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "wgnAU",
+                            "outputs": [
+                                {
+                                    "gate": 0.8214224849623137,
+                                    "output": "xM35X"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "SLIU3",
+                            "outputs": [
+                                {
+                                    "gate": 0.3747346325954892,
+                                    "output": "xM35X"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "glWYA",
+                            "outputs": [
+                                {
+                                    "gate": 0.6884800483937359,
+                                    "output": "xM35X"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "FIW1p",
+                            "outputs": [
+                                {
+                                    "gate": 0.9077502525406396,
+                                    "output": "xM35X"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "Y5anY",
+                            "outputs": [
+                                {
+                                    "gate": 0.09408596167532468,
+                                    "output": "xM35X"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "Chnsi",
+                            "outputs": [
+                                {
+                                    "gate": 0.8522190052884246,
+                                    "output": "xM35X"
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "xM35X",
+                            "outputs": [
+                                {
+                                    "gate": 0.8443465441714897,
+                                    "output": "p5WmF"
+                                },
+                                {
+                                    "gate": 0.48481299843294656,
+                                    "output": "ooN1H"
+                                },
+                                {
+                                    "gate": 0.9642074909845373,
+                                    "output": "PvQYm"
+                                },
+                                {
+                                    "gate": 0.4191326545052527,
+                                    "output": "hbS7y"
+                                },
+                                {
+                                    "gate": 0.3130448320731878,
+                                    "output": "MKHad"
+                                },
+                                {
+                                    "gate": 0.9832250910394769,
+                                    "output": "vgejb"
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "p5WmF",
+                            "outputs": []
+                        },
+                        {
+                            "id": "ooN1H",
+                            "outputs": []
+                        },
+                        {
+                            "id": "PvQYm",
+                            "outputs": []
+                        },
+                        {
+                            "id": "hbS7y",
+                            "outputs": []
+                        },
+                        {
+                            "id": "MKHad",
+                            "outputs": []
+                        },
+                        {
+                            "id": "vgejb",
+                            "outputs": []
+                        }
+                    ]
+                ]
+            },
+            "score": 0,
+            "executed": false
+        },
+        {
+            "arguments": {
+                "layers": [
+                    [
+                        {
+                            "id": "VVt5N",
+                            "outputs": [
+                                {
+                                    "gate": 0.8844116291704252,
+                                    "output": "DU8Gp"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "DC4fZ",
+                            "outputs": [
+                                {
+                                    "gate": 0.7231991948422847,
+                                    "output": "DU8Gp"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "U0hHH",
+                            "outputs": [
+                                {
+                                    "gate": 0.050608318182403966,
+                                    "output": "DU8Gp"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "w9TtP",
+                            "outputs": [
+                                {
+                                    "gate": 0.24917334789408785,
+                                    "output": "DU8Gp"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "YsDvc",
+                            "outputs": [
+                                {
+                                    "gate": 0.1072764584297976,
+                                    "output": "DU8Gp"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "KsIVg",
+                            "outputs": [
+                                {
+                                    "gate": 0.5143451276592708,
+                                    "output": "DU8Gp"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "pWSwD",
+                            "outputs": [
+                                {
+                                    "gate": 0.722290173264192,
+                                    "output": "DU8Gp"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "xtGFI",
+                            "outputs": [
+                                {
+                                    "gate": 0.6915044236274039,
+                                    "output": "DU8Gp"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "bScuU",
+                            "outputs": [
+                                {
+                                    "gate": 0.5595360430082259,
+                                    "output": "DU8Gp"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "Eg7C7",
+                            "outputs": [
+                                {
+                                    "gate": 0.8186306877368492,
+                                    "output": "DU8Gp"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "DyHrS",
+                            "outputs": [
+                                {
+                                    "gate": 0.5287490380760909,
+                                    "output": "DU8Gp"
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "DU8Gp",
+                            "outputs": [
+                                {
+                                    "gate": 0.7043132972255324,
+                                    "output": "oHlGp"
+                                },
+                                {
+                                    "gate": 0.40724970417641604,
+                                    "output": "GbIOB"
+                                },
+                                {
+                                    "gate": 0.18921361811835813,
+                                    "output": "8xWaS"
+                                },
+                                {
+                                    "gate": 0.4928319842761233,
+                                    "output": "gyxlt"
+                                },
+                                {
+                                    "gate": 0.4998840460668448,
+                                    "output": "O3LMP"
+                                },
+                                {
+                                    "gate": 0.5818267843346447,
+                                    "output": "irsVj"
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "oHlGp",
+                            "outputs": []
+                        },
+                        {
+                            "id": "GbIOB",
+                            "outputs": []
+                        },
+                        {
+                            "id": "8xWaS",
+                            "outputs": []
+                        },
+                        {
+                            "id": "gyxlt",
+                            "outputs": []
+                        },
+                        {
+                            "id": "O3LMP",
+                            "outputs": []
+                        },
+                        {
+                            "id": "irsVj",
+                            "outputs": []
+                        }
+                    ]
+                ]
+            },
+            "score": 0,
+            "executed": false
+        },
+        {
+            "arguments": {
+                "layers": [
+                    [
+                        {
+                            "id": "GII1c",
+                            "outputs": [
+                                {
+                                    "gate": 0.3705369358350694,
+                                    "output": "BQAft"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "ah0kL",
+                            "outputs": [
+                                {
+                                    "gate": 0.7912341946876902,
+                                    "output": "BQAft"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "WlEcD",
+                            "outputs": [
+                                {
+                                    "gate": 0.31779453394006896,
+                                    "output": "BQAft"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "6Cusc",
+                            "outputs": [
+                                {
+                                    "gate": 0.7455112788250804,
+                                    "output": "BQAft"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "Jwkwe",
+                            "outputs": [
+                                {
+                                    "gate": 0.02131432022947477,
+                                    "output": "BQAft"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "6h1ki",
+                            "outputs": [
+                                {
+                                    "gate": 0.7219946400617863,
+                                    "output": "BQAft"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "4mJvA",
+                            "outputs": [
+                                {
+                                    "gate": 0.6251715559831026,
+                                    "output": "BQAft"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "Ewjem",
+                            "outputs": [
+                                {
+                                    "gate": 0.883636591449598,
+                                    "output": "BQAft"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "trCqR",
+                            "outputs": [
+                                {
+                                    "gate": 0.8981006927005213,
+                                    "output": "BQAft"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "FNtv4",
+                            "outputs": [
+                                {
+                                    "gate": 0.9373615869135585,
+                                    "output": "BQAft"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "7WZPq",
+                            "outputs": [
+                                {
+                                    "gate": 0.9982340287302112,
+                                    "output": "BQAft"
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "BQAft",
+                            "outputs": [
+                                {
+                                    "gate": 0.036644193818207826,
+                                    "output": "ROok3"
+                                },
+                                {
+                                    "gate": 0.7872385517849381,
+                                    "output": "urQ0K"
+                                },
+                                {
+                                    "gate": 0.5031590721816577,
+                                    "output": "CEmc5"
+                                },
+                                {
+                                    "gate": 0.9757963708177739,
+                                    "output": "xxb2n"
+                                },
+                                {
+                                    "gate": 0.2504817938447923,
+                                    "output": "9y5Ax"
+                                },
+                                {
+                                    "gate": 0.1358063956096136,
+                                    "output": "vAWLs"
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "ROok3",
+                            "outputs": []
+                        },
+                        {
+                            "id": "urQ0K",
+                            "outputs": []
+                        },
+                        {
+                            "id": "CEmc5",
+                            "outputs": []
+                        },
+                        {
+                            "id": "xxb2n",
+                            "outputs": []
+                        },
+                        {
+                            "id": "9y5Ax",
+                            "outputs": []
+                        },
+                        {
+                            "id": "vAWLs",
+                            "outputs": []
+                        }
+                    ]
+                ]
+            },
+            "score": 0,
+            "executed": false
+        },
+        {
+            "arguments": {
+                "layers": [
+                    [
+                        {
+                            "id": "yRwV0",
+                            "outputs": [
+                                {
+                                    "gate": 0.41660379162828853,
+                                    "output": "S8nX0"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "gjKj5",
+                            "outputs": [
+                                {
+                                    "gate": 0.07046729069680846,
+                                    "output": "S8nX0"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "1R7Fw",
+                            "outputs": [
+                                {
+                                    "gate": 0.8955404301790417,
+                                    "output": "S8nX0"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "5Alh6",
+                            "outputs": [
+                                {
+                                    "gate": 0.2585199723946603,
+                                    "output": "S8nX0"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "bIZN2",
+                            "outputs": [
+                                {
+                                    "gate": 0.8087851295143134,
+                                    "output": "S8nX0"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "xS0Sp",
+                            "outputs": [
+                                {
+                                    "gate": 0.7006416611835773,
+                                    "output": "S8nX0"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "5OauM",
+                            "outputs": [
+                                {
+                                    "gate": 0.048595480681259184,
+                                    "output": "S8nX0"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "fEUJT",
+                            "outputs": [
+                                {
+                                    "gate": 0.5403652440158977,
+                                    "output": "S8nX0"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "2MYsP",
+                            "outputs": [
+                                {
+                                    "gate": 0.5737940169670535,
+                                    "output": "S8nX0"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "91cIV",
+                            "outputs": [
+                                {
+                                    "gate": 0.19128002611793993,
+                                    "output": "S8nX0"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "flhce",
+                            "outputs": [
+                                {
+                                    "gate": 0.8644617196962194,
+                                    "output": "S8nX0"
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "S8nX0",
+                            "outputs": [
+                                {
+                                    "gate": 0.012652068366979075,
+                                    "output": "RKqhW"
+                                },
+                                {
+                                    "gate": 0.836229475212894,
+                                    "output": "vwu5V"
+                                },
+                                {
+                                    "gate": 0.777542424850153,
+                                    "output": "IpOUq"
+                                },
+                                {
+                                    "gate": 0.20220784878289977,
+                                    "output": "piSxe"
+                                },
+                                {
+                                    "gate": 0.3959527739269184,
+                                    "output": "oU6cL"
+                                },
+                                {
+                                    "gate": 0.9981177375689707,
+                                    "output": "pSinF"
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "RKqhW",
+                            "outputs": []
+                        },
+                        {
+                            "id": "vwu5V",
+                            "outputs": []
+                        },
+                        {
+                            "id": "IpOUq",
+                            "outputs": []
+                        },
+                        {
+                            "id": "piSxe",
+                            "outputs": []
+                        },
+                        {
+                            "id": "oU6cL",
+                            "outputs": []
+                        },
+                        {
+                            "id": "pSinF",
+                            "outputs": []
+                        }
+                    ]
+                ]
+            },
+            "score": 0,
+            "executed": false
+        },
+        {
+            "arguments": {
+                "layers": [
+                    [
+                        {
+                            "id": "OXnAI",
+                            "outputs": [
+                                {
+                                    "gate": 0.19820759968605905,
+                                    "output": "usicS"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "QBZQ7",
+                            "outputs": [
+                                {
+                                    "gate": 0.006618412751179248,
+                                    "output": "usicS"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "xNgL2",
+                            "outputs": [
+                                {
+                                    "gate": 0.0068300006451014195,
+                                    "output": "usicS"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "LahWP",
+                            "outputs": [
+                                {
+                                    "gate": 0.22966387624434925,
+                                    "output": "usicS"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "aNaSj",
+                            "outputs": [
+                                {
+                                    "gate": 0.28412454751494387,
+                                    "output": "usicS"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "a56lh",
+                            "outputs": [
+                                {
+                                    "gate": 0.10077243099501776,
+                                    "output": "usicS"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "gTlfk",
+                            "outputs": [
+                                {
+                                    "gate": 0.3487600126393644,
+                                    "output": "usicS"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "XBZvU",
+                            "outputs": [
+                                {
+                                    "gate": 0.9974617659425598,
+                                    "output": "usicS"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "lEsje",
+                            "outputs": [
+                                {
+                                    "gate": 0.3637284017403293,
+                                    "output": "usicS"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "EM7nr",
+                            "outputs": [
+                                {
+                                    "gate": 0.0836140770170517,
+                                    "output": "usicS"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "1ipEU",
+                            "outputs": [
+                                {
+                                    "gate": 0.1145154634326675,
+                                    "output": "usicS"
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "usicS",
+                            "outputs": [
+                                {
+                                    "gate": 0.045345961652489164,
+                                    "output": "jiheq"
+                                },
+                                {
+                                    "gate": 0.9388777318269017,
+                                    "output": "CIACV"
+                                },
+                                {
+                                    "gate": 0.6543459972459595,
+                                    "output": "uVxpQ"
+                                },
+                                {
+                                    "gate": 0.43291372563998376,
+                                    "output": "neFiM"
+                                },
+                                {
+                                    "gate": 0.04292664953079828,
+                                    "output": "3PlHZ"
+                                },
+                                {
+                                    "gate": 0.94793059485483,
+                                    "output": "duMCu"
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "jiheq",
+                            "outputs": []
+                        },
+                        {
+                            "id": "CIACV",
+                            "outputs": []
+                        },
+                        {
+                            "id": "uVxpQ",
+                            "outputs": []
+                        },
+                        {
+                            "id": "neFiM",
+                            "outputs": []
+                        },
+                        {
+                            "id": "3PlHZ",
+                            "outputs": []
+                        },
+                        {
+                            "id": "duMCu",
+                            "outputs": []
+                        }
+                    ]
+                ]
+            },
+            "score": 0,
+            "executed": false
+        },
+        {
+            "arguments": {
+                "layers": [
+                    [
+                        {
+                            "id": "tOVRA",
+                            "outputs": [
+                                {
+                                    "gate": 0.5238514317327181,
+                                    "output": "NBtOf"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "DDLEd",
+                            "outputs": [
+                                {
+                                    "gate": 0.41993537643883405,
+                                    "output": "NBtOf"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "Jorkn",
+                            "outputs": [
+                                {
+                                    "gate": 0.8488345392225698,
+                                    "output": "NBtOf"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "YuEtr",
+                            "outputs": [
+                                {
+                                    "gate": 0.2549701871034411,
+                                    "output": "NBtOf"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "9OSDo",
+                            "outputs": [
+                                {
+                                    "gate": 0.8968760359883232,
+                                    "output": "NBtOf"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "t7cKH",
+                            "outputs": [
+                                {
+                                    "gate": 0.3653485744057059,
+                                    "output": "NBtOf"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "VfgGX",
+                            "outputs": [
+                                {
+                                    "gate": 0.3345448885706246,
+                                    "output": "NBtOf"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "MPace",
+                            "outputs": [
+                                {
+                                    "gate": 0.20152023234743655,
+                                    "output": "NBtOf"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "9Y3aM",
+                            "outputs": [
+                                {
+                                    "gate": 0.06019299167850822,
+                                    "output": "NBtOf"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "2UAsZ",
+                            "outputs": [
+                                {
+                                    "gate": 0.5199647815360156,
+                                    "output": "NBtOf"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "oqHKt",
+                            "outputs": [
+                                {
+                                    "gate": 0.9074401120762763,
+                                    "output": "NBtOf"
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "NBtOf",
+                            "outputs": [
+                                {
+                                    "gate": 0.5095663728052591,
+                                    "output": "Kqrsu"
+                                },
+                                {
+                                    "gate": 0.014928826830927555,
+                                    "output": "mJETP"
+                                },
+                                {
+                                    "gate": 0.7392254606495843,
+                                    "output": "SqhSK"
+                                },
+                                {
+                                    "gate": 0.20101639564944396,
+                                    "output": "N71W0"
+                                },
+                                {
+                                    "gate": 0.9364809044551272,
+                                    "output": "2OU0p"
+                                },
+                                {
+                                    "gate": 0.5472733179801978,
+                                    "output": "dxWLn"
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "Kqrsu",
+                            "outputs": []
+                        },
+                        {
+                            "id": "mJETP",
+                            "outputs": []
+                        },
+                        {
+                            "id": "SqhSK",
+                            "outputs": []
+                        },
+                        {
+                            "id": "N71W0",
+                            "outputs": []
+                        },
+                        {
+                            "id": "2OU0p",
+                            "outputs": []
+                        },
+                        {
+                            "id": "dxWLn",
+                            "outputs": []
+                        }
+                    ]
+                ]
+            },
+            "score": 0,
+            "executed": false
+        }
+    ]
+]

@@ -513,7 +513,7 @@ function mlduck_main(){
         isSwimming = response[2] > 0.5 ? true : false;
         // isSwimming = true;
         cannonDeg = Math.floor(response[3] * 360);
-        cannonDeg = Math.floor(response[4] * 100);
+        cannonRange = Math.floor(response[4] * 100);
         toCannon = response[5] > 0.5 ? true : false;
         [1e3, scanDeg, swimDeg, cannonDeg, cannonRange, isSwimming ? 1 : 0, toCannon ? 1 : 0].forEach(n => {
             log(n);
@@ -584,3 +584,4 @@ function mlduck_main(){
     autoProcreation();
 }
 setTimeout(mlduck_main, 1e3);
+// copy(JSON.stringify(mlGenerationList, true, 4));
