@@ -45,6 +45,8 @@ log(any) 印出
 ## TODO
 - [x] 因為場地為非同步執行，導致AI鴨無法在一幀內完成運算(需研究「pond/duck/generated/en/compressed.js」到底在寫三小)
 - [ ] 待研究：「third-party/JS-Interpreter/compressed.js」第1539行的「Interpreter.prototype.step」實際執行方式(造成執行延遲的原因)
+- [ ] 以「updateLocalFile」來讓葉面自動將當前data存至本機檔案
+- [ ] 如果因容易當掉而導致常常需手動重整、賦予檔案訪問權限，則改將data以ajax送至後端，再儲存於server(本機)。自動重整部分可用meta標籤或location.reload。重整之後以ajax請求data並執行
 
 # NOTE
 * `$e();` 運行程式
