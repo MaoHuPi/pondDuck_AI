@@ -256,6 +256,9 @@ class mlBasic{
     static count(array = [], value = ''){
         return(array.filter(v => v == value).length);
     }
+    static time(date = new Date()){
+        return(date.getTime());
+    }
 }
 class mlPoint{
     constructor(args = {}){
@@ -416,9 +419,14 @@ function mlduck_main(){
     function runGeneration(generationIndex = 0){
         let unexecuteIndex = findUnexecute(generationIndex);
         if(unexecuteIndex != undefined){
-            run(generationIndex, unexecuteIndex, (gi = generationIndex, di = unexecuteIndex) => {
+            let startTime = mlBasic.time();
+            run(generationIndex, unexecuteIndex, (gi = generationIndex, di = unexecuteIndex, st = startTime) => {
                 generationList[gi][di].executed = true;
+                generationList[gi][di].score = mlBasic.time() - st;
+
                 getProgress(true);
+                console.table(generationList[0].map(duckData => duckData.score));
+                
                 runGeneration(gi);
             });
         }
@@ -514,6 +522,14 @@ function mlduck_main(){
         }, 0))
     }
     randomGeneration(0, 10);
+    // v
     runGeneration(0);
+    function a(){
+        if(getProgress() == 1){
+
+        }
+        setTimeout(a, 1e3);
+    }
+    // ^
 }
 setTimeout(mlduck_main, 1e3);
