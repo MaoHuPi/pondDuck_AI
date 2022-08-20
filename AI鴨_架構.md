@@ -1,3 +1,7 @@
+# AI鴨_架構
+
+## input
+```
 < position x: float
 < position y: float
 < scan deg: int
@@ -9,14 +13,20 @@
 < speed: float
 < cannon deg: int
 < cannon range: int
+```
 
+## output
+```
 > scan deg: int
 > swim deg: int
 > stop: bool
 > cannon deg: int
 > cannon range: int
 > cannon: bool
+```
 
+## function
+```
 scan(deg) 掃描
 cannon(deg, range) 射擊
 drive(deg) 游泳，同swim
@@ -30,5 +40,7 @@ getX() 獲取X座標
 loc_y() 獲取Y座標?
 getY() 獲取Y座標
 log(any) 印出
+```
 
-目前問題：因為場地為非同步執行，導致AI鴨無法在一幀內完成運算(需研究「pond/duck/generated/en/compressed.js」到底在寫三小)
+## TODO
+- [x] 因為場地為非同步執行，導致AI鴨無法在一幀內完成運算(需研究「pond/duck/generated/en/compressed.js」到底在寫三小)
