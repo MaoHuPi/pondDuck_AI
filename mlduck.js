@@ -253,6 +253,9 @@ class mlBasic{
     static sigmoid(x, k = 10) {
         return 1 / (1 + Math.exp(-x/k));
     }
+    static count(array = [], value = ''){
+        return(array.filter(v => v == value).length);
+    }
 }
 class mlPoint{
     constructor(args = {}){
@@ -368,6 +371,7 @@ function mlduck_main(){
     const $ = function(c, f = document){return(f.querySelector(c));};
     const $$ = function(c, f = document){return(f.querySelectorAll(c));};
     const codeTextarea = $('textarea.ace_text-input');
+    const generationList = window.mlGenerationList = [];
     /*
      * note
      * $e(); // 運行程式
@@ -389,9 +393,55 @@ function mlduck_main(){
         }, 0))
     }
 
-    function run(){
-        let duckNow = newDuck();
-        window.duckNow = mlModel.load(duckNow);
+    function randomGeneration(generationIndex, duckNum){
+        generationList[generationIndex] = generationList[generationIndex] || [];
+        var generation = generationList[generationIndex];
+        for(let i = 0 ;i < duckNum; i++){
+            generation.push({
+                id: undefined, 
+                arguments: newDuck(), 
+                score: 0, 
+                executed: false
+            });
+        }
+    }
+
+    function findUnexecute(generationIndex = 0){
+        let unexecuteIndex = undefined;
+        generationList[generationIndex].map((duckData, index) => {
+            if(duckData.executed == false){
+                unexecuteIndex = index;
+                return;
+            }
+        });
+        console.log(unexecuteIndex);
+        return(unexecuteIndex);
+    }
+
+    function runGeneration(generationIndex = 0){
+        let unexecuteIndex = findUnexecute(generationIndex);
+        if(unexecuteIndex != undefined){
+            run(generationIndex, unexecuteIndex, (gi = generationIndex, di = unexecuteIndex) => {
+                generationList[gi][di].executed = true;
+
+                var progressList = generationList[0].map(duckData => duckData.executed);
+                var doneNum = mlBasic.count(progressList, true);
+                var totalNum = progressList.length;
+                var progressBar = new Array(doneNum).fill('🟩').join('') + new Array(totalNum - doneNum).fill('⬜').join('');
+                // console.table(progressList);
+                console.log(`${doneNum}/${totalNum} | ${progressBar}`);
+
+                runGeneration(gi);
+            });
+        }
+        else{
+            return(true);
+        }
+    }
+
+    function run(generationIndex = 0, duckNum = 0, doneFunction = () => {}){
+        let duckData = generationList[generationIndex][duckNum];
+        window.mlDuckNow = mlModel.load(duckData.arguments);
         var myCode = code_mlDuck + `
     let scanDeg = 0;
     let swimDeg = 0;
@@ -399,7 +449,7 @@ function mlduck_main(){
     let cannonRange = 0;
     let isSwimming = false;
     let toCannon = false;
-    let duck = mlModel.load(${JSON.stringify(duckNow)});
+    let duck = mlModel.load(${JSON.stringify(duckData.arguments)});
     // let duck = eval('new mlModel({architecture: [1, 6]})');
     function mlCalculate(){
         let response = duck.calculate(
@@ -441,26 +491,29 @@ function mlduck_main(){
     }
         `;
         be().setValue(myCode); // 設定ace editor內容
-        Ye(new Event('click', {"bubbles":true, "cancelable":false})); // 運行程式
+        window.Ye(new Event('click', {"bubbles":true, "cancelable":false})); // 運行程式
         setTimeout(() => {
             for(let i = 0; i < 100; i++){
-                T.$c[0].oC.run();
+                // console.log(window.T.$c[0]);
+                window.T.$c[0].oC.run();
             }
         }, 0.1e3);
-        reset();
+        reset(doneFunction);
     }
-    run();
 
-    function reset(autoRun = true){
+    function reset(doneFunction = () => {}){
         if(T.$c[0].Pf){
             af(new Event('click', {"bubbles":true, "cancelable":false}));
-            if(autoRun){
-                setTimeout(run, 1e3);
+            if(doneFunction){
+                setTimeout(doneFunction, 1e3); // 之所以等待1秒，是因為af需要處裡時間
             }
         }
         else{
-            setTimeout(reset, 1e3);
+            setTimeout(reset, 1e3, doneFunction);
         }
     }
+
+    randomGeneration(0, 10);
+    runGeneration(0);
 }
 setTimeout(mlduck_main, 1e3);
