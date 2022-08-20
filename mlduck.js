@@ -257,7 +257,6 @@ class mlBasic{
         return(array.filter(v => v == value).length);
     }
     static time(){
-        
         // return(new Date().getTime());
         return(performance.now());
     }
@@ -384,7 +383,8 @@ function mlduck_main(){
     const $$ = function(c, f = document){return(f.querySelectorAll(c));};
     const codeTextarea = $('textarea.ace_text-input');
     const generationList = window.mlGenerationList = [];
-    let canvasUpdateTimes = 0;
+    let updateTimeDelta = 0;
+    let lastUpdateTime = mlBasic.time();
 
     function findUnexecute(generationIndex = 0){
         let unexecuteIndex = undefined;
@@ -568,7 +568,9 @@ function mlduck_main(){
         // Object.getPrototypeOf($('#display').getContext("2d")).fill = () => {console.log(this)}
         Object.getPrototypeOf($('#display').getContext("2d")).fill = functionAdd(Object.getPrototypeOf($('#display').getContext("2d")).fill, function(){
             if(this.fillStyle == "#527dbf"){
-                canvasUpdateTimes++;
+                var timeNow = mlBasic.time();
+                updateTimeDelta = timeNow - lastUpdateTime;
+                lastUpdateTime = timeNow;
             }
         });
 
@@ -626,8 +628,7 @@ function mlduck_main(){
             window.mlGenerationNumNow += 1;
             console.clear();
         }
-        $('#docsButton').innerText = `FPS: ${canvasUpdateTimes}`;
-        canvasUpdateTimes = 0;
+        $('#docsButton').innerText = `FPS: ${Math.round(1e3/updateTimeDelta)}`;
         setTimeout(autoProcreation, 1e3);
     }
     autoProcreation();
