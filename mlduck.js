@@ -384,6 +384,7 @@ function mlduck_main(){
     const $$ = function(c, f = document){return(f.querySelectorAll(c));};
     const codeTextarea = $('textarea.ace_text-input');
     const generationList = window.mlGenerationList = [];
+    let canvasUpdateTimes = 0;
 
     function findUnexecute(generationIndex = 0){
         let unexecuteIndex = undefined;
@@ -423,6 +424,13 @@ function mlduck_main(){
                 return(data[i].value);
             }
         }
+    }
+
+    function functionAdd(oldFunction, addition){
+        return(function(...args){
+            oldFunction.bind(this)(...args);
+            addition.bind(this)(...args);
+        });
     }
 
     /* generation */
@@ -517,8 +525,8 @@ function mlduck_main(){
         cannonDeg = Math.floor(response[3] * 360);
         cannonRange = Math.floor(response[4] * 100);
         toCannon = response[5] > 0.5 ? true : false;
-        [1e3, scanDeg, swimDeg, cannonDeg, cannonRange, isSwimming ? 1 : 0, toCannon ? 1 : 0].forEach(n => {
-            log(n);
+        ['1e3', 'scanDeg', 'swimDeg', 'cannonDeg', 'cannonRange', 'isSwimming', 'toCannon'].forEach(n => {
+            log(\`\${n}: \${eval(n)}\`);
         });
         if(isSwimming){
             swim(swimDeg);
@@ -557,6 +565,13 @@ function mlduck_main(){
             a.setProperty(c, "load", a.createNativeFunction(d));
         };
 
+        // Object.getPrototypeOf($('#display').getContext("2d")).fill = () => {console.log(this)}
+        Object.getPrototypeOf($('#display').getContext("2d")).fill = functionAdd(Object.getPrototypeOf($('#display').getContext("2d")).fill, function(){
+            if(this.fillStyle == "#527dbf"){
+                canvasUpdateTimes++;
+            }
+        });
+
         window.Ye(new Event('click', {"bubbles":true, "cancelable":false})); // 運行程式
         // T.$c[0].oC = new Interpreter(myCode, T.$c[0].Si.Ow); // 重建Interpreter，會因為myCode未經compile而導致鴨子不會動
         accelerate();
@@ -586,6 +601,9 @@ function mlduck_main(){
     }
 
     /* main */
+    // $('#docsButton').removeEventListener('click', Ue, true); // 移除click監聽器
+    $('#docsButton').replaceWith($('#docsButton').cloneNode()); // 利用元素替換來移除所有監聽器
+
     window.Uf(1); // 切換至JavaScript輸入
     if (!Qf) { // Vf(); // 啟用JavaScript編輯
         var a = Od ? Nd.getValue() : Xe();
@@ -608,6 +626,8 @@ function mlduck_main(){
             window.mlGenerationNumNow += 1;
             console.clear();
         }
+        $('#docsButton').innerText = `FPS: ${canvasUpdateTimes}`;
+        canvasUpdateTimes = 0;
         setTimeout(autoProcreation, 1e3);
     }
     autoProcreation();
