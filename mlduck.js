@@ -433,6 +433,20 @@ function mlduck_main(){
         });
     }
 
+    function countFPS(){
+        var timeNow = mlBasic.time();
+        var showFPS = false;
+        if(updateTimeDelta != timeNow - lastUpdateTime){
+            showFPS = true;
+        }
+        updateTimeDelta = timeNow - lastUpdateTime;
+        lastUpdateTime = timeNow;
+        if(showFPS){
+            $('#docsButton').innerText = `FPS: ${Math.round(1e3/updateTimeDelta)}`;
+        }
+    }
+    window.mlCountFPS = countFPS;
+
     /* generation */
     function randomGeneration(generationIndex, duckNum){
         generationList[generationIndex] = generationList[generationIndex] || [];
@@ -566,13 +580,6 @@ function mlduck_main(){
         };
 
         // Object.getPrototypeOf($('#display').getContext("2d")).fill = () => {console.log(this)}
-        Object.getPrototypeOf($('#display').getContext("2d")).fill = functionAdd(Object.getPrototypeOf($('#display').getContext("2d")).fill, function(){
-            if(this.fillStyle == "#527dbf"){
-                var timeNow = mlBasic.time();
-                updateTimeDelta = timeNow - lastUpdateTime;
-                lastUpdateTime = timeNow;
-            }
-        });
 
         window.Ye(new Event('click', {"bubbles":true, "cancelable":false})); // 運行程式
         // T.$c[0].oC = new Interpreter(myCode, T.$c[0].Si.Ow); // 重建Interpreter，會因為myCode未經compile而導致鴨子不會動
@@ -606,6 +613,10 @@ function mlduck_main(){
     // $('#docsButton').removeEventListener('click', Ue, true); // 移除click監聽器
     $('#docsButton').replaceWith($('#docsButton').cloneNode()); // 利用元素替換來移除所有監聽器
 
+    Ne = functionAdd(Ne, function(){ // 將FPS計數器接至canvas更新函式後
+        (window.mlCountFPS && window.mlCountFPS());
+    });
+
     window.Uf(1); // 切換至JavaScript輸入
     if (!Qf) { // Vf(); // 啟用JavaScript編輯
         var a = Od ? Nd.getValue() : Xe();
@@ -628,7 +639,6 @@ function mlduck_main(){
             window.mlGenerationNumNow += 1;
             console.clear();
         }
-        $('#docsButton').innerText = `FPS: ${Math.round(1e3/updateTimeDelta)}`;
         setTimeout(autoProcreation, 1e3);
     }
     autoProcreation();
