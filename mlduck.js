@@ -368,31 +368,38 @@ function newDuck(){
     return(model.pack());
 }
 function mlduck_main(){
+    /* basic */
     const $ = function(c, f = document){return(f.querySelector(c));};
     const $$ = function(c, f = document){return(f.querySelectorAll(c));};
     const codeTextarea = $('textarea.ace_text-input');
     const generationList = window.mlGenerationList = [];
-    /*
-     * note
-     * $e(); // 運行程式
-     * T.reset(); // 重置
-     * T // 遊戲場地物件(內涵遊戲所需變數及控制函數)
-     * T.$c // 鴨子物件陣列
-     * Ae(T.$c[0]); // 讓鴨子進入死亡狀態($c後的索引值為要殺死的鴨子)
-     * T.$c[0].FH // 鴨子compiled後的code
-     * T.$c[0].Pf // 鴨子是否死亡
-     */
-    window.Uf(1); // 切換至JavaScript輸入
-    if (!Qf) { // Vf(); // 啟用JavaScript編輯
-        var a = Od ? Nd.getValue() : Xe();
-        Od ? a.trim() || (w.clear(),
-        Tf(!1)) : true ? Tf(!0) : (Qf = !0,
-        setTimeout(function() {
-            Nd.setValue(a, -1);
-            Qf = !1
-        }, 0))
+
+    /* method */
+    function findUnexecute(generationIndex = 0){
+        let unexecuteIndex = undefined;
+        generationList[generationIndex].map((duckData, index) => {
+            if(duckData.executed == false){
+                unexecuteIndex = index;
+                return;
+            }
+        });
+        console.log(unexecuteIndex);
+        return(unexecuteIndex);
     }
 
+    function getProgress(toLog = false){
+        var progressList = generationList[0].map(duckData => duckData.executed);
+        var doneNum = mlBasic.count(progressList, true);
+        var totalNum = progressList.length;
+        if(toLog){
+            var progressBar = new Array(doneNum).fill('🟩').join('') + new Array(totalNum - doneNum).fill('⬜').join('');
+            // console.table(progressList);
+            console.log(`${doneNum}/${totalNum} | ${progressBar}`);
+        }
+        return(doneNum != totalNum ? doneNum/totalNum : 1);
+    }
+
+    /* generation */
     function randomGeneration(generationIndex, duckNum){
         generationList[generationIndex] = generationList[generationIndex] || [];
         var generation = generationList[generationIndex];
@@ -406,31 +413,12 @@ function mlduck_main(){
         }
     }
 
-    function findUnexecute(generationIndex = 0){
-        let unexecuteIndex = undefined;
-        generationList[generationIndex].map((duckData, index) => {
-            if(duckData.executed == false){
-                unexecuteIndex = index;
-                return;
-            }
-        });
-        console.log(unexecuteIndex);
-        return(unexecuteIndex);
-    }
-
     function runGeneration(generationIndex = 0){
         let unexecuteIndex = findUnexecute(generationIndex);
         if(unexecuteIndex != undefined){
             run(generationIndex, unexecuteIndex, (gi = generationIndex, di = unexecuteIndex) => {
                 generationList[gi][di].executed = true;
-
-                var progressList = generationList[0].map(duckData => duckData.executed);
-                var doneNum = mlBasic.count(progressList, true);
-                var totalNum = progressList.length;
-                var progressBar = new Array(doneNum).fill('🟩').join('') + new Array(totalNum - doneNum).fill('⬜').join('');
-                // console.table(progressList);
-                console.log(`${doneNum}/${totalNum} | ${progressBar}`);
-
+                getProgress(true);
                 runGeneration(gi);
             });
         }
@@ -438,7 +426,8 @@ function mlduck_main(){
             return(true);
         }
     }
-
+    
+    /* execute */
     function run(generationIndex = 0, duckNum = 0, doneFunction = () => {}){
         let duckData = generationList[generationIndex][duckNum];
         window.mlDuckNow = mlModel.load(duckData.arguments);
@@ -513,6 +502,17 @@ function mlduck_main(){
         }
     }
 
+    /* main */
+    window.Uf(1); // 切換至JavaScript輸入
+    if (!Qf) { // Vf(); // 啟用JavaScript編輯
+        var a = Od ? Nd.getValue() : Xe();
+        Od ? a.trim() || (w.clear(),
+        Tf(!1)) : true ? Tf(!0) : (Qf = !0,
+        setTimeout(function() {
+            Nd.setValue(a, -1);
+            Qf = !1
+        }, 0))
+    }
     randomGeneration(0, 10);
     runGeneration(0);
 }
