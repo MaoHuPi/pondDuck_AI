@@ -5,159 +5,159 @@
                 "layers": [
                     [
                         {
-                            "id": "jputy",
+                            "id": "8rwKp",
                             "outputs": [
                                 {
-                                    "gate": 0.8050044951193507,
-                                    "output": "MjwnE"
+                                    "gate": "0.61",
+                                    "output": "12kh5"
                                 }
                             ]
                         },
                         {
-                            "id": "0k9QV",
+                            "id": "Pk4Fw",
                             "outputs": [
                                 {
-                                    "gate": 0.8180513550468238,
-                                    "output": "MjwnE"
+                                    "gate": "0.91",
+                                    "output": "12kh5"
                                 }
                             ]
                         },
                         {
-                            "id": "wZuf0",
+                            "id": "DxAIf",
                             "outputs": [
                                 {
-                                    "gate": 0.6497672466361804,
-                                    "output": "MjwnE"
+                                    "gate": "0.98",
+                                    "output": "12kh5"
                                 }
                             ]
                         },
                         {
-                            "id": "lnbVL",
+                            "id": "7UoWH",
                             "outputs": [
                                 {
-                                    "gate": 0.9389805232018027,
-                                    "output": "MjwnE"
+                                    "gate": "0.55",
+                                    "output": "12kh5"
                                 }
                             ]
                         },
                         {
-                            "id": "qQYQZ",
+                            "id": "ZH14q",
                             "outputs": [
                                 {
-                                    "gate": 0.28656829866397526,
-                                    "output": "MjwnE"
+                                    "gate": "0.29",
+                                    "output": "12kh5"
                                 }
                             ]
                         },
                         {
-                            "id": "FoAQD",
+                            "id": "65mmg",
                             "outputs": [
                                 {
-                                    "gate": 0.1783354974371929,
-                                    "output": "MjwnE"
+                                    "gate": "0.31",
+                                    "output": "12kh5"
                                 }
                             ]
                         },
                         {
-                            "id": "CU4Fp",
+                            "id": "RY7oD",
                             "outputs": [
                                 {
-                                    "gate": 0.32166853111086646,
-                                    "output": "MjwnE"
+                                    "gate": "0.88",
+                                    "output": "12kh5"
                                 }
                             ]
                         },
                         {
-                            "id": "vEUw7",
+                            "id": "Tf632",
                             "outputs": [
                                 {
-                                    "gate": 0.9012910841348087,
-                                    "output": "MjwnE"
+                                    "gate": "0.59",
+                                    "output": "12kh5"
                                 }
                             ]
                         },
                         {
-                            "id": "JMwwm",
+                            "id": "610Fx",
                             "outputs": [
                                 {
-                                    "gate": 0.6897872707165866,
-                                    "output": "MjwnE"
+                                    "gate": "0.49",
+                                    "output": "12kh5"
                                 }
                             ]
                         },
                         {
-                            "id": "s6v6b",
+                            "id": "uAhYG",
                             "outputs": [
                                 {
-                                    "gate": 0.326981785525007,
-                                    "output": "MjwnE"
+                                    "gate": "0.35",
+                                    "output": "12kh5"
                                 }
                             ]
                         },
                         {
-                            "id": "UJncR",
+                            "id": "HcoyK",
                             "outputs": [
                                 {
-                                    "gate": 0.017478692974636667,
-                                    "output": "MjwnE"
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "id": "MjwnE",
-                            "outputs": [
-                                {
-                                    "gate": 0.12696034551154556,
-                                    "output": "XbyEY"
-                                },
-                                {
-                                    "gate": 0.3605881993080742,
-                                    "output": "U24I7"
-                                },
-                                {
-                                    "gate": 0.17541218488646826,
-                                    "output": "9sOgZ"
-                                },
-                                {
-                                    "gate": 0.08771000175169719,
-                                    "output": "wpQGV"
-                                },
-                                {
-                                    "gate": 0.44780762185713785,
-                                    "output": "qw1QW"
-                                },
-                                {
-                                    "gate": 0.42876475980089457,
-                                    "output": "obKTI"
+                                    "gate": "0.63",
+                                    "output": "12kh5"
                                 }
                             ]
                         }
                     ],
                     [
                         {
-                            "id": "XbyEY",
+                            "id": "12kh5",
+                            "outputs": [
+                                {
+                                    "gate": "0.98",
+                                    "output": "df7D4"
+                                },
+                                {
+                                    "gate": "0.37",
+                                    "output": "UWEHc"
+                                },
+                                {
+                                    "gate": "0.09",
+                                    "output": "ZtNSO"
+                                },
+                                {
+                                    "gate": "0.59",
+                                    "output": "Xw2ll"
+                                },
+                                {
+                                    "gate": "0.68",
+                                    "output": "OwrFK"
+                                },
+                                {
+                                    "gate": "0.65",
+                                    "output": "oea8s"
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "df7D4",
                             "outputs": []
                         },
                         {
-                            "id": "U24I7",
+                            "id": "UWEHc",
                             "outputs": []
                         },
                         {
-                            "id": "9sOgZ",
+                            "id": "ZtNSO",
                             "outputs": []
                         },
                         {
-                            "id": "wpQGV",
+                            "id": "Xw2ll",
                             "outputs": []
                         },
                         {
-                            "id": "qw1QW",
+                            "id": "OwrFK",
                             "outputs": []
                         },
                         {
-                            "id": "obKTI",
+                            "id": "oea8s",
                             "outputs": []
                         }
                     ]
@@ -171,159 +171,159 @@
                 "layers": [
                     [
                         {
-                            "id": "TMRiK",
+                            "id": "NVY17",
                             "outputs": [
                                 {
-                                    "gate": 0.3257513166771906,
-                                    "output": "3jSF1"
+                                    "gate": "0.09",
+                                    "output": "Jhbt7"
                                 }
                             ]
                         },
                         {
-                            "id": "Ur6ma",
+                            "id": "a57St",
                             "outputs": [
                                 {
-                                    "gate": 0.06689182394390025,
-                                    "output": "3jSF1"
+                                    "gate": "0.29",
+                                    "output": "Jhbt7"
                                 }
                             ]
                         },
                         {
-                            "id": "8Qq1h",
+                            "id": "xkPLO",
                             "outputs": [
                                 {
-                                    "gate": 0.6949702443418067,
-                                    "output": "3jSF1"
+                                    "gate": "0.40",
+                                    "output": "Jhbt7"
                                 }
                             ]
                         },
                         {
-                            "id": "r4xUI",
+                            "id": "2C5i6",
                             "outputs": [
                                 {
-                                    "gate": 0.2120247588924402,
-                                    "output": "3jSF1"
+                                    "gate": "0.21",
+                                    "output": "Jhbt7"
                                 }
                             ]
                         },
                         {
-                            "id": "ZDEIr",
+                            "id": "AcibO",
                             "outputs": [
                                 {
-                                    "gate": 0.2139854065193023,
-                                    "output": "3jSF1"
+                                    "gate": "0.20",
+                                    "output": "Jhbt7"
                                 }
                             ]
                         },
                         {
-                            "id": "0wikf",
+                            "id": "XTZAW",
                             "outputs": [
                                 {
-                                    "gate": 0.5232996369996459,
-                                    "output": "3jSF1"
+                                    "gate": "0.04",
+                                    "output": "Jhbt7"
                                 }
                             ]
                         },
                         {
-                            "id": "oMxM4",
+                            "id": "0B6MM",
                             "outputs": [
                                 {
-                                    "gate": 0.6854075325096567,
-                                    "output": "3jSF1"
+                                    "gate": "0.09",
+                                    "output": "Jhbt7"
                                 }
                             ]
                         },
                         {
-                            "id": "rr3Fe",
+                            "id": "ToCvy",
                             "outputs": [
                                 {
-                                    "gate": 0.629661029061561,
-                                    "output": "3jSF1"
+                                    "gate": "0.69",
+                                    "output": "Jhbt7"
                                 }
                             ]
                         },
                         {
-                            "id": "q2KPp",
+                            "id": "H0kAL",
                             "outputs": [
                                 {
-                                    "gate": 0.6875198773466547,
-                                    "output": "3jSF1"
+                                    "gate": "0.11",
+                                    "output": "Jhbt7"
                                 }
                             ]
                         },
                         {
-                            "id": "s2BOB",
+                            "id": "EqSXi",
                             "outputs": [
                                 {
-                                    "gate": 0.3625910644822614,
-                                    "output": "3jSF1"
+                                    "gate": "0.12",
+                                    "output": "Jhbt7"
                                 }
                             ]
                         },
                         {
-                            "id": "CL2iO",
+                            "id": "PippD",
                             "outputs": [
                                 {
-                                    "gate": 0.8422978201182041,
-                                    "output": "3jSF1"
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "id": "3jSF1",
-                            "outputs": [
-                                {
-                                    "gate": 0.9681648953754041,
-                                    "output": "ZkGF0"
-                                },
-                                {
-                                    "gate": 0.2676441100937199,
-                                    "output": "mKWn3"
-                                },
-                                {
-                                    "gate": 0.22303660147770943,
-                                    "output": "24GMx"
-                                },
-                                {
-                                    "gate": 0.796404954146072,
-                                    "output": "NbNae"
-                                },
-                                {
-                                    "gate": 0.32074937244148294,
-                                    "output": "f0wEf"
-                                },
-                                {
-                                    "gate": 0.37765502955537533,
-                                    "output": "1eLVs"
+                                    "gate": "0.63",
+                                    "output": "Jhbt7"
                                 }
                             ]
                         }
                     ],
                     [
                         {
-                            "id": "ZkGF0",
+                            "id": "Jhbt7",
+                            "outputs": [
+                                {
+                                    "gate": "0.10",
+                                    "output": "GDwtQ"
+                                },
+                                {
+                                    "gate": "0.50",
+                                    "output": "MTJXF"
+                                },
+                                {
+                                    "gate": "0.39",
+                                    "output": "92jrc"
+                                },
+                                {
+                                    "gate": "0.00",
+                                    "output": "PfYS7"
+                                },
+                                {
+                                    "gate": "0.98",
+                                    "output": "Bcjtc"
+                                },
+                                {
+                                    "gate": "0.90",
+                                    "output": "KDZ70"
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "GDwtQ",
                             "outputs": []
                         },
                         {
-                            "id": "mKWn3",
+                            "id": "MTJXF",
                             "outputs": []
                         },
                         {
-                            "id": "24GMx",
+                            "id": "92jrc",
                             "outputs": []
                         },
                         {
-                            "id": "NbNae",
+                            "id": "PfYS7",
                             "outputs": []
                         },
                         {
-                            "id": "f0wEf",
+                            "id": "Bcjtc",
                             "outputs": []
                         },
                         {
-                            "id": "1eLVs",
+                            "id": "KDZ70",
                             "outputs": []
                         }
                     ]
@@ -337,159 +337,159 @@
                 "layers": [
                     [
                         {
-                            "id": "tVQBR",
+                            "id": "sAR6k",
                             "outputs": [
                                 {
-                                    "gate": 0.4454210619045451,
-                                    "output": "0RBHZ"
+                                    "gate": "0.40",
+                                    "output": "3TeL7"
                                 }
                             ]
                         },
                         {
-                            "id": "ZRwEX",
+                            "id": "pGeoc",
                             "outputs": [
                                 {
-                                    "gate": 0.8094191737679162,
-                                    "output": "0RBHZ"
+                                    "gate": "0.50",
+                                    "output": "3TeL7"
                                 }
                             ]
                         },
                         {
-                            "id": "EWG7o",
+                            "id": "vfxPf",
                             "outputs": [
                                 {
-                                    "gate": 0.965241705146235,
-                                    "output": "0RBHZ"
+                                    "gate": "0.04",
+                                    "output": "3TeL7"
                                 }
                             ]
                         },
                         {
-                            "id": "nVesI",
+                            "id": "wZDR2",
                             "outputs": [
                                 {
-                                    "gate": 0.7715256203348635,
-                                    "output": "0RBHZ"
+                                    "gate": "0.43",
+                                    "output": "3TeL7"
                                 }
                             ]
                         },
                         {
-                            "id": "WRQeg",
+                            "id": "XN6SJ",
                             "outputs": [
                                 {
-                                    "gate": 0.3190155491242792,
-                                    "output": "0RBHZ"
+                                    "gate": "0.34",
+                                    "output": "3TeL7"
                                 }
                             ]
                         },
                         {
-                            "id": "6y7AX",
+                            "id": "8SAXE",
                             "outputs": [
                                 {
-                                    "gate": 0.3255202507074464,
-                                    "output": "0RBHZ"
+                                    "gate": "0.88",
+                                    "output": "3TeL7"
                                 }
                             ]
                         },
                         {
-                            "id": "ZUJDS",
+                            "id": "5WJGR",
                             "outputs": [
                                 {
-                                    "gate": 0.960672851217039,
-                                    "output": "0RBHZ"
+                                    "gate": "0.01",
+                                    "output": "3TeL7"
                                 }
                             ]
                         },
                         {
-                            "id": "ME4Mw",
+                            "id": "ZsOQM",
                             "outputs": [
                                 {
-                                    "gate": 0.9100411302711933,
-                                    "output": "0RBHZ"
+                                    "gate": "0.62",
+                                    "output": "3TeL7"
                                 }
                             ]
                         },
                         {
-                            "id": "fnsUy",
+                            "id": "knVaf",
                             "outputs": [
                                 {
-                                    "gate": 0.887352346557863,
-                                    "output": "0RBHZ"
+                                    "gate": "0.86",
+                                    "output": "3TeL7"
                                 }
                             ]
                         },
                         {
-                            "id": "MpVRT",
+                            "id": "vZZkG",
                             "outputs": [
                                 {
-                                    "gate": 0.7691800367193704,
-                                    "output": "0RBHZ"
+                                    "gate": "0.01",
+                                    "output": "3TeL7"
                                 }
                             ]
                         },
                         {
-                            "id": "IQm1X",
+                            "id": "JtLv4",
                             "outputs": [
                                 {
-                                    "gate": 0.7479062791528897,
-                                    "output": "0RBHZ"
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "id": "0RBHZ",
-                            "outputs": [
-                                {
-                                    "gate": 0.5776342149617704,
-                                    "output": "NfYVt"
-                                },
-                                {
-                                    "gate": 0.06522048634478339,
-                                    "output": "iBH54"
-                                },
-                                {
-                                    "gate": 0.5791714496198803,
-                                    "output": "eFCiQ"
-                                },
-                                {
-                                    "gate": 0.7726634322900059,
-                                    "output": "KpfQ3"
-                                },
-                                {
-                                    "gate": 0.14373048462123084,
-                                    "output": "Z2FIq"
-                                },
-                                {
-                                    "gate": 0.3756148990500354,
-                                    "output": "1Z6Uk"
+                                    "gate": "0.97",
+                                    "output": "3TeL7"
                                 }
                             ]
                         }
                     ],
                     [
                         {
-                            "id": "NfYVt",
+                            "id": "3TeL7",
+                            "outputs": [
+                                {
+                                    "gate": "0.36",
+                                    "output": "D8xS7"
+                                },
+                                {
+                                    "gate": "0.32",
+                                    "output": "xdew6"
+                                },
+                                {
+                                    "gate": "0.44",
+                                    "output": "k9Xlw"
+                                },
+                                {
+                                    "gate": "0.38",
+                                    "output": "T7s5r"
+                                },
+                                {
+                                    "gate": "0.34",
+                                    "output": "irgJj"
+                                },
+                                {
+                                    "gate": "0.52",
+                                    "output": "bKCDt"
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "D8xS7",
                             "outputs": []
                         },
                         {
-                            "id": "iBH54",
+                            "id": "xdew6",
                             "outputs": []
                         },
                         {
-                            "id": "eFCiQ",
+                            "id": "k9Xlw",
                             "outputs": []
                         },
                         {
-                            "id": "KpfQ3",
+                            "id": "T7s5r",
                             "outputs": []
                         },
                         {
-                            "id": "Z2FIq",
+                            "id": "irgJj",
                             "outputs": []
                         },
                         {
-                            "id": "1Z6Uk",
+                            "id": "bKCDt",
                             "outputs": []
                         }
                     ]
@@ -503,159 +503,159 @@
                 "layers": [
                     [
                         {
-                            "id": "8cQnL",
+                            "id": "mCYv9",
                             "outputs": [
                                 {
-                                    "gate": 0.5803241980452802,
-                                    "output": "aUX2e"
+                                    "gate": "0.40",
+                                    "output": "IDr4M"
                                 }
                             ]
                         },
                         {
-                            "id": "k6Txw",
+                            "id": "FMLQL",
                             "outputs": [
                                 {
-                                    "gate": 0.4312562127343964,
-                                    "output": "aUX2e"
+                                    "gate": "0.55",
+                                    "output": "IDr4M"
                                 }
                             ]
                         },
                         {
-                            "id": "C8cWw",
+                            "id": "uUN63",
                             "outputs": [
                                 {
-                                    "gate": 0.19257197330255038,
-                                    "output": "aUX2e"
+                                    "gate": "0.97",
+                                    "output": "IDr4M"
                                 }
                             ]
                         },
                         {
-                            "id": "17tnS",
+                            "id": "bbR8w",
                             "outputs": [
                                 {
-                                    "gate": 0.260377420815733,
-                                    "output": "aUX2e"
+                                    "gate": "0.09",
+                                    "output": "IDr4M"
                                 }
                             ]
                         },
                         {
-                            "id": "LiXr0",
+                            "id": "NHY5e",
                             "outputs": [
                                 {
-                                    "gate": 0.36138524832490804,
-                                    "output": "aUX2e"
+                                    "gate": "0.10",
+                                    "output": "IDr4M"
                                 }
                             ]
                         },
                         {
-                            "id": "DDMDR",
+                            "id": "3ZyM6",
                             "outputs": [
                                 {
-                                    "gate": 0.9290066901463128,
-                                    "output": "aUX2e"
+                                    "gate": "0.74",
+                                    "output": "IDr4M"
                                 }
                             ]
                         },
                         {
-                            "id": "Vtdh2",
+                            "id": "mXTMF",
                             "outputs": [
                                 {
-                                    "gate": 0.20095938543559666,
-                                    "output": "aUX2e"
+                                    "gate": "0.62",
+                                    "output": "IDr4M"
                                 }
                             ]
                         },
                         {
-                            "id": "IIojw",
+                            "id": "LSew1",
                             "outputs": [
                                 {
-                                    "gate": 0.6036975701189333,
-                                    "output": "aUX2e"
+                                    "gate": "0.73",
+                                    "output": "IDr4M"
                                 }
                             ]
                         },
                         {
-                            "id": "mli66",
+                            "id": "FU65A",
                             "outputs": [
                                 {
-                                    "gate": 0.5400985645725105,
-                                    "output": "aUX2e"
+                                    "gate": "1.00",
+                                    "output": "IDr4M"
                                 }
                             ]
                         },
                         {
-                            "id": "fc8wr",
+                            "id": "T94Dy",
                             "outputs": [
                                 {
-                                    "gate": 0.08275795257874918,
-                                    "output": "aUX2e"
+                                    "gate": "0.57",
+                                    "output": "IDr4M"
                                 }
                             ]
                         },
                         {
-                            "id": "KlrYn",
+                            "id": "ESEhg",
                             "outputs": [
                                 {
-                                    "gate": 0.33993420396635377,
-                                    "output": "aUX2e"
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "id": "aUX2e",
-                            "outputs": [
-                                {
-                                    "gate": 0.9576004156089357,
-                                    "output": "qHTP5"
-                                },
-                                {
-                                    "gate": 0.08788913919321706,
-                                    "output": "YqMb0"
-                                },
-                                {
-                                    "gate": 0.661401210921686,
-                                    "output": "uu05k"
-                                },
-                                {
-                                    "gate": 0.7879538901602883,
-                                    "output": "enhW3"
-                                },
-                                {
-                                    "gate": 0.5004979897912729,
-                                    "output": "8AIjI"
-                                },
-                                {
-                                    "gate": 0.9700342065778791,
-                                    "output": "TcsP7"
+                                    "gate": "0.18",
+                                    "output": "IDr4M"
                                 }
                             ]
                         }
                     ],
                     [
                         {
-                            "id": "qHTP5",
+                            "id": "IDr4M",
+                            "outputs": [
+                                {
+                                    "gate": "0.62",
+                                    "output": "sggho"
+                                },
+                                {
+                                    "gate": "0.48",
+                                    "output": "3wBFI"
+                                },
+                                {
+                                    "gate": "0.13",
+                                    "output": "KBL0T"
+                                },
+                                {
+                                    "gate": "0.61",
+                                    "output": "Z9Vqt"
+                                },
+                                {
+                                    "gate": "0.97",
+                                    "output": "ri3iG"
+                                },
+                                {
+                                    "gate": "0.55",
+                                    "output": "qKv5E"
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "sggho",
                             "outputs": []
                         },
                         {
-                            "id": "YqMb0",
+                            "id": "3wBFI",
                             "outputs": []
                         },
                         {
-                            "id": "uu05k",
+                            "id": "KBL0T",
                             "outputs": []
                         },
                         {
-                            "id": "enhW3",
+                            "id": "Z9Vqt",
                             "outputs": []
                         },
                         {
-                            "id": "8AIjI",
+                            "id": "ri3iG",
                             "outputs": []
                         },
                         {
-                            "id": "TcsP7",
+                            "id": "qKv5E",
                             "outputs": []
                         }
                     ]
@@ -669,159 +669,159 @@
                 "layers": [
                     [
                         {
-                            "id": "cIndX",
+                            "id": "Fa0m2",
                             "outputs": [
                                 {
-                                    "gate": 0.5587520722581945,
-                                    "output": "xM35X"
+                                    "gate": "0.35",
+                                    "output": "PtfNM"
                                 }
                             ]
                         },
                         {
-                            "id": "IfIvn",
+                            "id": "NO5bk",
                             "outputs": [
                                 {
-                                    "gate": 0.48109203253253674,
-                                    "output": "xM35X"
+                                    "gate": "0.50",
+                                    "output": "PtfNM"
                                 }
                             ]
                         },
                         {
-                            "id": "JS4Qx",
+                            "id": "Bw2yZ",
                             "outputs": [
                                 {
-                                    "gate": 0.8111185112642596,
-                                    "output": "xM35X"
+                                    "gate": "0.15",
+                                    "output": "PtfNM"
                                 }
                             ]
                         },
                         {
-                            "id": "FjHyQ",
+                            "id": "akYda",
                             "outputs": [
                                 {
-                                    "gate": 0.5418457082625034,
-                                    "output": "xM35X"
+                                    "gate": "0.04",
+                                    "output": "PtfNM"
                                 }
                             ]
                         },
                         {
-                            "id": "Y2Gs7",
+                            "id": "2fxCy",
                             "outputs": [
                                 {
-                                    "gate": 0.38453580783200114,
-                                    "output": "xM35X"
+                                    "gate": "0.73",
+                                    "output": "PtfNM"
                                 }
                             ]
                         },
                         {
-                            "id": "wgnAU",
+                            "id": "PBuBf",
                             "outputs": [
                                 {
-                                    "gate": 0.8214224849623137,
-                                    "output": "xM35X"
+                                    "gate": "0.65",
+                                    "output": "PtfNM"
                                 }
                             ]
                         },
                         {
-                            "id": "SLIU3",
+                            "id": "vt0cH",
                             "outputs": [
                                 {
-                                    "gate": 0.3747346325954892,
-                                    "output": "xM35X"
+                                    "gate": "0.90",
+                                    "output": "PtfNM"
                                 }
                             ]
                         },
                         {
-                            "id": "glWYA",
+                            "id": "DgdLC",
                             "outputs": [
                                 {
-                                    "gate": 0.6884800483937359,
-                                    "output": "xM35X"
+                                    "gate": "0.48",
+                                    "output": "PtfNM"
                                 }
                             ]
                         },
                         {
-                            "id": "FIW1p",
+                            "id": "2LTxU",
                             "outputs": [
                                 {
-                                    "gate": 0.9077502525406396,
-                                    "output": "xM35X"
+                                    "gate": "0.12",
+                                    "output": "PtfNM"
                                 }
                             ]
                         },
                         {
-                            "id": "Y5anY",
+                            "id": "TatZA",
                             "outputs": [
                                 {
-                                    "gate": 0.09408596167532468,
-                                    "output": "xM35X"
+                                    "gate": "0.57",
+                                    "output": "PtfNM"
                                 }
                             ]
                         },
                         {
-                            "id": "Chnsi",
+                            "id": "YYwLn",
                             "outputs": [
                                 {
-                                    "gate": 0.8522190052884246,
-                                    "output": "xM35X"
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "id": "xM35X",
-                            "outputs": [
-                                {
-                                    "gate": 0.8443465441714897,
-                                    "output": "p5WmF"
-                                },
-                                {
-                                    "gate": 0.48481299843294656,
-                                    "output": "ooN1H"
-                                },
-                                {
-                                    "gate": 0.9642074909845373,
-                                    "output": "PvQYm"
-                                },
-                                {
-                                    "gate": 0.4191326545052527,
-                                    "output": "hbS7y"
-                                },
-                                {
-                                    "gate": 0.3130448320731878,
-                                    "output": "MKHad"
-                                },
-                                {
-                                    "gate": 0.9832250910394769,
-                                    "output": "vgejb"
+                                    "gate": "0.69",
+                                    "output": "PtfNM"
                                 }
                             ]
                         }
                     ],
                     [
                         {
-                            "id": "p5WmF",
+                            "id": "PtfNM",
+                            "outputs": [
+                                {
+                                    "gate": "0.79",
+                                    "output": "Amsjb"
+                                },
+                                {
+                                    "gate": "0.38",
+                                    "output": "buBRP"
+                                },
+                                {
+                                    "gate": "0.54",
+                                    "output": "nUE0x"
+                                },
+                                {
+                                    "gate": "0.55",
+                                    "output": "0VMTW"
+                                },
+                                {
+                                    "gate": "0.00",
+                                    "output": "81R9y"
+                                },
+                                {
+                                    "gate": "0.01",
+                                    "output": "CFkxU"
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "Amsjb",
                             "outputs": []
                         },
                         {
-                            "id": "ooN1H",
+                            "id": "buBRP",
                             "outputs": []
                         },
                         {
-                            "id": "PvQYm",
+                            "id": "nUE0x",
                             "outputs": []
                         },
                         {
-                            "id": "hbS7y",
+                            "id": "0VMTW",
                             "outputs": []
                         },
                         {
-                            "id": "MKHad",
+                            "id": "81R9y",
                             "outputs": []
                         },
                         {
-                            "id": "vgejb",
+                            "id": "CFkxU",
                             "outputs": []
                         }
                     ]
@@ -835,159 +835,159 @@
                 "layers": [
                     [
                         {
-                            "id": "VVt5N",
+                            "id": "2wfIr",
                             "outputs": [
                                 {
-                                    "gate": 0.8844116291704252,
-                                    "output": "DU8Gp"
+                                    "gate": "0.01",
+                                    "output": "roovb"
                                 }
                             ]
                         },
                         {
-                            "id": "DC4fZ",
+                            "id": "rTyQc",
                             "outputs": [
                                 {
-                                    "gate": 0.7231991948422847,
-                                    "output": "DU8Gp"
+                                    "gate": "0.81",
+                                    "output": "roovb"
                                 }
                             ]
                         },
                         {
-                            "id": "U0hHH",
+                            "id": "XNEe2",
                             "outputs": [
                                 {
-                                    "gate": 0.050608318182403966,
-                                    "output": "DU8Gp"
+                                    "gate": "0.87",
+                                    "output": "roovb"
                                 }
                             ]
                         },
                         {
-                            "id": "w9TtP",
+                            "id": "3Joel",
                             "outputs": [
                                 {
-                                    "gate": 0.24917334789408785,
-                                    "output": "DU8Gp"
+                                    "gate": "0.47",
+                                    "output": "roovb"
                                 }
                             ]
                         },
                         {
-                            "id": "YsDvc",
+                            "id": "XWWLp",
                             "outputs": [
                                 {
-                                    "gate": 0.1072764584297976,
-                                    "output": "DU8Gp"
+                                    "gate": "0.01",
+                                    "output": "roovb"
                                 }
                             ]
                         },
                         {
-                            "id": "KsIVg",
+                            "id": "di94K",
                             "outputs": [
                                 {
-                                    "gate": 0.5143451276592708,
-                                    "output": "DU8Gp"
+                                    "gate": "0.50",
+                                    "output": "roovb"
                                 }
                             ]
                         },
                         {
-                            "id": "pWSwD",
+                            "id": "VFtBA",
                             "outputs": [
                                 {
-                                    "gate": 0.722290173264192,
-                                    "output": "DU8Gp"
+                                    "gate": "0.81",
+                                    "output": "roovb"
                                 }
                             ]
                         },
                         {
-                            "id": "xtGFI",
+                            "id": "2dmv2",
                             "outputs": [
                                 {
-                                    "gate": 0.6915044236274039,
-                                    "output": "DU8Gp"
+                                    "gate": "0.36",
+                                    "output": "roovb"
                                 }
                             ]
                         },
                         {
-                            "id": "bScuU",
+                            "id": "6iCTc",
                             "outputs": [
                                 {
-                                    "gate": 0.5595360430082259,
-                                    "output": "DU8Gp"
+                                    "gate": "0.21",
+                                    "output": "roovb"
                                 }
                             ]
                         },
                         {
-                            "id": "Eg7C7",
+                            "id": "RxsrX",
                             "outputs": [
                                 {
-                                    "gate": 0.8186306877368492,
-                                    "output": "DU8Gp"
+                                    "gate": "0.74",
+                                    "output": "roovb"
                                 }
                             ]
                         },
                         {
-                            "id": "DyHrS",
+                            "id": "rtSL7",
                             "outputs": [
                                 {
-                                    "gate": 0.5287490380760909,
-                                    "output": "DU8Gp"
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "id": "DU8Gp",
-                            "outputs": [
-                                {
-                                    "gate": 0.7043132972255324,
-                                    "output": "oHlGp"
-                                },
-                                {
-                                    "gate": 0.40724970417641604,
-                                    "output": "GbIOB"
-                                },
-                                {
-                                    "gate": 0.18921361811835813,
-                                    "output": "8xWaS"
-                                },
-                                {
-                                    "gate": 0.4928319842761233,
-                                    "output": "gyxlt"
-                                },
-                                {
-                                    "gate": 0.4998840460668448,
-                                    "output": "O3LMP"
-                                },
-                                {
-                                    "gate": 0.5818267843346447,
-                                    "output": "irsVj"
+                                    "gate": "0.01",
+                                    "output": "roovb"
                                 }
                             ]
                         }
                     ],
                     [
                         {
-                            "id": "oHlGp",
+                            "id": "roovb",
+                            "outputs": [
+                                {
+                                    "gate": "0.58",
+                                    "output": "Rj2Hr"
+                                },
+                                {
+                                    "gate": "0.34",
+                                    "output": "yUOHO"
+                                },
+                                {
+                                    "gate": "0.25",
+                                    "output": "2mtIM"
+                                },
+                                {
+                                    "gate": "0.10",
+                                    "output": "NEtDX"
+                                },
+                                {
+                                    "gate": "0.47",
+                                    "output": "e4LhK"
+                                },
+                                {
+                                    "gate": "0.50",
+                                    "output": "CPQ5W"
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "Rj2Hr",
                             "outputs": []
                         },
                         {
-                            "id": "GbIOB",
+                            "id": "yUOHO",
                             "outputs": []
                         },
                         {
-                            "id": "8xWaS",
+                            "id": "2mtIM",
                             "outputs": []
                         },
                         {
-                            "id": "gyxlt",
+                            "id": "NEtDX",
                             "outputs": []
                         },
                         {
-                            "id": "O3LMP",
+                            "id": "e4LhK",
                             "outputs": []
                         },
                         {
-                            "id": "irsVj",
+                            "id": "CPQ5W",
                             "outputs": []
                         }
                     ]
@@ -1001,159 +1001,159 @@
                 "layers": [
                     [
                         {
-                            "id": "GII1c",
+                            "id": "xCef3",
                             "outputs": [
                                 {
-                                    "gate": 0.3705369358350694,
-                                    "output": "BQAft"
+                                    "gate": "0.30",
+                                    "output": "RciaU"
                                 }
                             ]
                         },
                         {
-                            "id": "ah0kL",
+                            "id": "o0VGv",
                             "outputs": [
                                 {
-                                    "gate": 0.7912341946876902,
-                                    "output": "BQAft"
+                                    "gate": "0.52",
+                                    "output": "RciaU"
                                 }
                             ]
                         },
                         {
-                            "id": "WlEcD",
+                            "id": "rUUlP",
                             "outputs": [
                                 {
-                                    "gate": 0.31779453394006896,
-                                    "output": "BQAft"
+                                    "gate": "0.25",
+                                    "output": "RciaU"
                                 }
                             ]
                         },
                         {
-                            "id": "6Cusc",
+                            "id": "fSns1",
                             "outputs": [
                                 {
-                                    "gate": 0.7455112788250804,
-                                    "output": "BQAft"
+                                    "gate": "0.22",
+                                    "output": "RciaU"
                                 }
                             ]
                         },
                         {
-                            "id": "Jwkwe",
+                            "id": "pPwGd",
                             "outputs": [
                                 {
-                                    "gate": 0.02131432022947477,
-                                    "output": "BQAft"
+                                    "gate": "0.92",
+                                    "output": "RciaU"
                                 }
                             ]
                         },
                         {
-                            "id": "6h1ki",
+                            "id": "VAKit",
                             "outputs": [
                                 {
-                                    "gate": 0.7219946400617863,
-                                    "output": "BQAft"
+                                    "gate": "0.07",
+                                    "output": "RciaU"
                                 }
                             ]
                         },
                         {
-                            "id": "4mJvA",
+                            "id": "XVAPp",
                             "outputs": [
                                 {
-                                    "gate": 0.6251715559831026,
-                                    "output": "BQAft"
+                                    "gate": "0.71",
+                                    "output": "RciaU"
                                 }
                             ]
                         },
                         {
-                            "id": "Ewjem",
+                            "id": "1mxIm",
                             "outputs": [
                                 {
-                                    "gate": 0.883636591449598,
-                                    "output": "BQAft"
+                                    "gate": "0.89",
+                                    "output": "RciaU"
                                 }
                             ]
                         },
                         {
-                            "id": "trCqR",
+                            "id": "CX3GO",
                             "outputs": [
                                 {
-                                    "gate": 0.8981006927005213,
-                                    "output": "BQAft"
+                                    "gate": "0.42",
+                                    "output": "RciaU"
                                 }
                             ]
                         },
                         {
-                            "id": "FNtv4",
+                            "id": "H27NU",
                             "outputs": [
                                 {
-                                    "gate": 0.9373615869135585,
-                                    "output": "BQAft"
+                                    "gate": "0.82",
+                                    "output": "RciaU"
                                 }
                             ]
                         },
                         {
-                            "id": "7WZPq",
+                            "id": "dkOV0",
                             "outputs": [
                                 {
-                                    "gate": 0.9982340287302112,
-                                    "output": "BQAft"
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "id": "BQAft",
-                            "outputs": [
-                                {
-                                    "gate": 0.036644193818207826,
-                                    "output": "ROok3"
-                                },
-                                {
-                                    "gate": 0.7872385517849381,
-                                    "output": "urQ0K"
-                                },
-                                {
-                                    "gate": 0.5031590721816577,
-                                    "output": "CEmc5"
-                                },
-                                {
-                                    "gate": 0.9757963708177739,
-                                    "output": "xxb2n"
-                                },
-                                {
-                                    "gate": 0.2504817938447923,
-                                    "output": "9y5Ax"
-                                },
-                                {
-                                    "gate": 0.1358063956096136,
-                                    "output": "vAWLs"
+                                    "gate": "0.90",
+                                    "output": "RciaU"
                                 }
                             ]
                         }
                     ],
                     [
                         {
-                            "id": "ROok3",
+                            "id": "RciaU",
+                            "outputs": [
+                                {
+                                    "gate": "0.02",
+                                    "output": "wuZoI"
+                                },
+                                {
+                                    "gate": "0.79",
+                                    "output": "JTXlD"
+                                },
+                                {
+                                    "gate": "0.88",
+                                    "output": "u2Au8"
+                                },
+                                {
+                                    "gate": "0.70",
+                                    "output": "DqsgS"
+                                },
+                                {
+                                    "gate": "0.18",
+                                    "output": "2LdTG"
+                                },
+                                {
+                                    "gate": "0.77",
+                                    "output": "eM2r6"
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "wuZoI",
                             "outputs": []
                         },
                         {
-                            "id": "urQ0K",
+                            "id": "JTXlD",
                             "outputs": []
                         },
                         {
-                            "id": "CEmc5",
+                            "id": "u2Au8",
                             "outputs": []
                         },
                         {
-                            "id": "xxb2n",
+                            "id": "DqsgS",
                             "outputs": []
                         },
                         {
-                            "id": "9y5Ax",
+                            "id": "2LdTG",
                             "outputs": []
                         },
                         {
-                            "id": "vAWLs",
+                            "id": "eM2r6",
                             "outputs": []
                         }
                     ]
@@ -1167,159 +1167,159 @@
                 "layers": [
                     [
                         {
-                            "id": "yRwV0",
+                            "id": "Ta2qf",
                             "outputs": [
                                 {
-                                    "gate": 0.41660379162828853,
-                                    "output": "S8nX0"
+                                    "gate": "0.91",
+                                    "output": "Hjagp"
                                 }
                             ]
                         },
                         {
-                            "id": "gjKj5",
+                            "id": "eB4J1",
                             "outputs": [
                                 {
-                                    "gate": 0.07046729069680846,
-                                    "output": "S8nX0"
+                                    "gate": "0.10",
+                                    "output": "Hjagp"
                                 }
                             ]
                         },
                         {
-                            "id": "1R7Fw",
+                            "id": "KlcgW",
                             "outputs": [
                                 {
-                                    "gate": 0.8955404301790417,
-                                    "output": "S8nX0"
+                                    "gate": "0.38",
+                                    "output": "Hjagp"
                                 }
                             ]
                         },
                         {
-                            "id": "5Alh6",
+                            "id": "4Ca1C",
                             "outputs": [
                                 {
-                                    "gate": 0.2585199723946603,
-                                    "output": "S8nX0"
+                                    "gate": "0.46",
+                                    "output": "Hjagp"
                                 }
                             ]
                         },
                         {
-                            "id": "bIZN2",
+                            "id": "073la",
                             "outputs": [
                                 {
-                                    "gate": 0.8087851295143134,
-                                    "output": "S8nX0"
+                                    "gate": "0.43",
+                                    "output": "Hjagp"
                                 }
                             ]
                         },
                         {
-                            "id": "xS0Sp",
+                            "id": "hw7Vp",
                             "outputs": [
                                 {
-                                    "gate": 0.7006416611835773,
-                                    "output": "S8nX0"
+                                    "gate": "0.47",
+                                    "output": "Hjagp"
                                 }
                             ]
                         },
                         {
-                            "id": "5OauM",
+                            "id": "tqSyo",
                             "outputs": [
                                 {
-                                    "gate": 0.048595480681259184,
-                                    "output": "S8nX0"
+                                    "gate": "0.65",
+                                    "output": "Hjagp"
                                 }
                             ]
                         },
                         {
-                            "id": "fEUJT",
+                            "id": "Dncp0",
                             "outputs": [
                                 {
-                                    "gate": 0.5403652440158977,
-                                    "output": "S8nX0"
+                                    "gate": "0.42",
+                                    "output": "Hjagp"
                                 }
                             ]
                         },
                         {
-                            "id": "2MYsP",
+                            "id": "yOdgQ",
                             "outputs": [
                                 {
-                                    "gate": 0.5737940169670535,
-                                    "output": "S8nX0"
+                                    "gate": "0.71",
+                                    "output": "Hjagp"
                                 }
                             ]
                         },
                         {
-                            "id": "91cIV",
+                            "id": "ay894",
                             "outputs": [
                                 {
-                                    "gate": 0.19128002611793993,
-                                    "output": "S8nX0"
+                                    "gate": "0.00",
+                                    "output": "Hjagp"
                                 }
                             ]
                         },
                         {
-                            "id": "flhce",
+                            "id": "KDSjd",
                             "outputs": [
                                 {
-                                    "gate": 0.8644617196962194,
-                                    "output": "S8nX0"
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "id": "S8nX0",
-                            "outputs": [
-                                {
-                                    "gate": 0.012652068366979075,
-                                    "output": "RKqhW"
-                                },
-                                {
-                                    "gate": 0.836229475212894,
-                                    "output": "vwu5V"
-                                },
-                                {
-                                    "gate": 0.777542424850153,
-                                    "output": "IpOUq"
-                                },
-                                {
-                                    "gate": 0.20220784878289977,
-                                    "output": "piSxe"
-                                },
-                                {
-                                    "gate": 0.3959527739269184,
-                                    "output": "oU6cL"
-                                },
-                                {
-                                    "gate": 0.9981177375689707,
-                                    "output": "pSinF"
+                                    "gate": "0.12",
+                                    "output": "Hjagp"
                                 }
                             ]
                         }
                     ],
                     [
                         {
-                            "id": "RKqhW",
+                            "id": "Hjagp",
+                            "outputs": [
+                                {
+                                    "gate": "0.49",
+                                    "output": "k1Rya"
+                                },
+                                {
+                                    "gate": "0.88",
+                                    "output": "sc1KD"
+                                },
+                                {
+                                    "gate": "0.82",
+                                    "output": "lpvnt"
+                                },
+                                {
+                                    "gate": "0.73",
+                                    "output": "FEuM2"
+                                },
+                                {
+                                    "gate": "0.44",
+                                    "output": "NTfZT"
+                                },
+                                {
+                                    "gate": "0.03",
+                                    "output": "i81dJ"
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "k1Rya",
                             "outputs": []
                         },
                         {
-                            "id": "vwu5V",
+                            "id": "sc1KD",
                             "outputs": []
                         },
                         {
-                            "id": "IpOUq",
+                            "id": "lpvnt",
                             "outputs": []
                         },
                         {
-                            "id": "piSxe",
+                            "id": "FEuM2",
                             "outputs": []
                         },
                         {
-                            "id": "oU6cL",
+                            "id": "NTfZT",
                             "outputs": []
                         },
                         {
-                            "id": "pSinF",
+                            "id": "i81dJ",
                             "outputs": []
                         }
                     ]
@@ -1333,159 +1333,159 @@
                 "layers": [
                     [
                         {
-                            "id": "OXnAI",
+                            "id": "4tL6F",
                             "outputs": [
                                 {
-                                    "gate": 0.19820759968605905,
-                                    "output": "usicS"
+                                    "gate": "0.71",
+                                    "output": "sLtK2"
                                 }
                             ]
                         },
                         {
-                            "id": "QBZQ7",
+                            "id": "wFqLv",
                             "outputs": [
                                 {
-                                    "gate": 0.006618412751179248,
-                                    "output": "usicS"
+                                    "gate": "0.80",
+                                    "output": "sLtK2"
                                 }
                             ]
                         },
                         {
-                            "id": "xNgL2",
+                            "id": "Qp8dh",
                             "outputs": [
                                 {
-                                    "gate": 0.0068300006451014195,
-                                    "output": "usicS"
+                                    "gate": "0.71",
+                                    "output": "sLtK2"
                                 }
                             ]
                         },
                         {
-                            "id": "LahWP",
+                            "id": "j7Jn4",
                             "outputs": [
                                 {
-                                    "gate": 0.22966387624434925,
-                                    "output": "usicS"
+                                    "gate": "0.85",
+                                    "output": "sLtK2"
                                 }
                             ]
                         },
                         {
-                            "id": "aNaSj",
+                            "id": "bOM5K",
                             "outputs": [
                                 {
-                                    "gate": 0.28412454751494387,
-                                    "output": "usicS"
+                                    "gate": "0.64",
+                                    "output": "sLtK2"
                                 }
                             ]
                         },
                         {
-                            "id": "a56lh",
+                            "id": "xHQiK",
                             "outputs": [
                                 {
-                                    "gate": 0.10077243099501776,
-                                    "output": "usicS"
+                                    "gate": "0.59",
+                                    "output": "sLtK2"
                                 }
                             ]
                         },
                         {
-                            "id": "gTlfk",
+                            "id": "a6Zck",
                             "outputs": [
                                 {
-                                    "gate": 0.3487600126393644,
-                                    "output": "usicS"
+                                    "gate": "0.50",
+                                    "output": "sLtK2"
                                 }
                             ]
                         },
                         {
-                            "id": "XBZvU",
+                            "id": "pxhDE",
                             "outputs": [
                                 {
-                                    "gate": 0.9974617659425598,
-                                    "output": "usicS"
+                                    "gate": "0.76",
+                                    "output": "sLtK2"
                                 }
                             ]
                         },
                         {
-                            "id": "lEsje",
+                            "id": "irRXv",
                             "outputs": [
                                 {
-                                    "gate": 0.3637284017403293,
-                                    "output": "usicS"
+                                    "gate": "0.73",
+                                    "output": "sLtK2"
                                 }
                             ]
                         },
                         {
-                            "id": "EM7nr",
+                            "id": "3XUs6",
                             "outputs": [
                                 {
-                                    "gate": 0.0836140770170517,
-                                    "output": "usicS"
+                                    "gate": "0.59",
+                                    "output": "sLtK2"
                                 }
                             ]
                         },
                         {
-                            "id": "1ipEU",
+                            "id": "ydnKr",
                             "outputs": [
                                 {
-                                    "gate": 0.1145154634326675,
-                                    "output": "usicS"
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "id": "usicS",
-                            "outputs": [
-                                {
-                                    "gate": 0.045345961652489164,
-                                    "output": "jiheq"
-                                },
-                                {
-                                    "gate": 0.9388777318269017,
-                                    "output": "CIACV"
-                                },
-                                {
-                                    "gate": 0.6543459972459595,
-                                    "output": "uVxpQ"
-                                },
-                                {
-                                    "gate": 0.43291372563998376,
-                                    "output": "neFiM"
-                                },
-                                {
-                                    "gate": 0.04292664953079828,
-                                    "output": "3PlHZ"
-                                },
-                                {
-                                    "gate": 0.94793059485483,
-                                    "output": "duMCu"
+                                    "gate": "0.21",
+                                    "output": "sLtK2"
                                 }
                             ]
                         }
                     ],
                     [
                         {
-                            "id": "jiheq",
+                            "id": "sLtK2",
+                            "outputs": [
+                                {
+                                    "gate": "0.96",
+                                    "output": "pFXEj"
+                                },
+                                {
+                                    "gate": "0.88",
+                                    "output": "RW8oM"
+                                },
+                                {
+                                    "gate": "0.76",
+                                    "output": "TexwB"
+                                },
+                                {
+                                    "gate": "0.60",
+                                    "output": "WPr4I"
+                                },
+                                {
+                                    "gate": "0.15",
+                                    "output": "nMvCf"
+                                },
+                                {
+                                    "gate": "0.72",
+                                    "output": "ye0E9"
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "pFXEj",
                             "outputs": []
                         },
                         {
-                            "id": "CIACV",
+                            "id": "RW8oM",
                             "outputs": []
                         },
                         {
-                            "id": "uVxpQ",
+                            "id": "TexwB",
                             "outputs": []
                         },
                         {
-                            "id": "neFiM",
+                            "id": "WPr4I",
                             "outputs": []
                         },
                         {
-                            "id": "3PlHZ",
+                            "id": "nMvCf",
                             "outputs": []
                         },
                         {
-                            "id": "duMCu",
+                            "id": "ye0E9",
                             "outputs": []
                         }
                     ]
@@ -1499,166 +1499,166 @@
                 "layers": [
                     [
                         {
-                            "id": "tOVRA",
+                            "id": "q84lV",
                             "outputs": [
                                 {
-                                    "gate": 0.5238514317327181,
-                                    "output": "NBtOf"
+                                    "gate": "0.55",
+                                    "output": "KEwaw"
                                 }
                             ]
                         },
                         {
-                            "id": "DDLEd",
+                            "id": "l7wCl",
                             "outputs": [
                                 {
-                                    "gate": 0.41993537643883405,
-                                    "output": "NBtOf"
+                                    "gate": "0.79",
+                                    "output": "KEwaw"
                                 }
                             ]
                         },
                         {
-                            "id": "Jorkn",
+                            "id": "w7rTD",
                             "outputs": [
                                 {
-                                    "gate": 0.8488345392225698,
-                                    "output": "NBtOf"
+                                    "gate": "0.64",
+                                    "output": "KEwaw"
                                 }
                             ]
                         },
                         {
-                            "id": "YuEtr",
+                            "id": "m6UMS",
                             "outputs": [
                                 {
-                                    "gate": 0.2549701871034411,
-                                    "output": "NBtOf"
+                                    "gate": "0.09",
+                                    "output": "KEwaw"
                                 }
                             ]
                         },
                         {
-                            "id": "9OSDo",
+                            "id": "lZmNU",
                             "outputs": [
                                 {
-                                    "gate": 0.8968760359883232,
-                                    "output": "NBtOf"
+                                    "gate": "0.31",
+                                    "output": "KEwaw"
                                 }
                             ]
                         },
                         {
-                            "id": "t7cKH",
+                            "id": "AOj5D",
                             "outputs": [
                                 {
-                                    "gate": 0.3653485744057059,
-                                    "output": "NBtOf"
+                                    "gate": "0.50",
+                                    "output": "KEwaw"
                                 }
                             ]
                         },
                         {
-                            "id": "VfgGX",
+                            "id": "swKcq",
                             "outputs": [
                                 {
-                                    "gate": 0.3345448885706246,
-                                    "output": "NBtOf"
+                                    "gate": "0.49",
+                                    "output": "KEwaw"
                                 }
                             ]
                         },
                         {
-                            "id": "MPace",
+                            "id": "1MsxB",
                             "outputs": [
                                 {
-                                    "gate": 0.20152023234743655,
-                                    "output": "NBtOf"
+                                    "gate": "0.78",
+                                    "output": "KEwaw"
                                 }
                             ]
                         },
                         {
-                            "id": "9Y3aM",
+                            "id": "KvcS0",
                             "outputs": [
                                 {
-                                    "gate": 0.06019299167850822,
-                                    "output": "NBtOf"
+                                    "gate": "0.94",
+                                    "output": "KEwaw"
                                 }
                             ]
                         },
                         {
-                            "id": "2UAsZ",
+                            "id": "ZDxUA",
                             "outputs": [
                                 {
-                                    "gate": 0.5199647815360156,
-                                    "output": "NBtOf"
+                                    "gate": "0.73",
+                                    "output": "KEwaw"
                                 }
                             ]
                         },
                         {
-                            "id": "oqHKt",
+                            "id": "PS9GO",
                             "outputs": [
                                 {
-                                    "gate": 0.9074401120762763,
-                                    "output": "NBtOf"
-                                }
-                            ]
-                        }
-                    ],
-                    [
-                        {
-                            "id": "NBtOf",
-                            "outputs": [
-                                {
-                                    "gate": 0.5095663728052591,
-                                    "output": "Kqrsu"
-                                },
-                                {
-                                    "gate": 0.014928826830927555,
-                                    "output": "mJETP"
-                                },
-                                {
-                                    "gate": 0.7392254606495843,
-                                    "output": "SqhSK"
-                                },
-                                {
-                                    "gate": 0.20101639564944396,
-                                    "output": "N71W0"
-                                },
-                                {
-                                    "gate": 0.9364809044551272,
-                                    "output": "2OU0p"
-                                },
-                                {
-                                    "gate": 0.5472733179801978,
-                                    "output": "dxWLn"
+                                    "gate": "0.54",
+                                    "output": "KEwaw"
                                 }
                             ]
                         }
                     ],
                     [
                         {
-                            "id": "Kqrsu",
+                            "id": "KEwaw",
+                            "outputs": [
+                                {
+                                    "gate": "0.78",
+                                    "output": "fYMAH"
+                                },
+                                {
+                                    "gate": "0.59",
+                                    "output": "sYjDQ"
+                                },
+                                {
+                                    "gate": "0.98",
+                                    "output": "xK0go"
+                                },
+                                {
+                                    "gate": "0.44",
+                                    "output": "HJ91h"
+                                },
+                                {
+                                    "gate": "0.76",
+                                    "output": "kA3xI"
+                                },
+                                {
+                                    "gate": "0.39",
+                                    "output": "HYemB"
+                                }
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "id": "fYMAH",
                             "outputs": []
                         },
                         {
-                            "id": "mJETP",
+                            "id": "sYjDQ",
                             "outputs": []
                         },
                         {
-                            "id": "SqhSK",
+                            "id": "xK0go",
                             "outputs": []
                         },
                         {
-                            "id": "N71W0",
+                            "id": "HJ91h",
                             "outputs": []
                         },
                         {
-                            "id": "2OU0p",
+                            "id": "kA3xI",
                             "outputs": []
                         },
                         {
-                            "id": "dxWLn",
+                            "id": "HYemB",
                             "outputs": []
                         }
                     ]
                 ]
             },
-            "score": 0,
-            "executed": false
+            "score": 10540.69999999553,
+            "executed": true
         }
     ]
 ]

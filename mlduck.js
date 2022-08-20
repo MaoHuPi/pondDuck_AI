@@ -256,8 +256,10 @@ class mlBasic{
     static count(array = [], value = ''){
         return(array.filter(v => v == value).length);
     }
-    static time(date = new Date()){
-        return(date.getTime());
+    static time(){
+        
+        // return(new Date().getTime());
+        return(performance.now());
     }
 }
 class mlPoint{
@@ -310,7 +312,7 @@ class mlModel{
                 if(autoConnect && layerIndex - 1 > -1){
                     this.layers[layerIndex - 1].forEach(point => {
                         // 暫時先全部連接並隨機gate
-                        point.connect(pointNow, mlBasic.randfloat(0, 1));
+                        point.connect(pointNow, parseFloat(mlBasic.randfloat(0, 1).toFixed(2)));
                     });
                 }
             }
@@ -579,6 +581,8 @@ function mlduck_main(){
             window.mlGenerationNumNow += 1;
             console.clear();
         }
+        $('#docsButton').innerText = (`stepTimes: ${stepTimes}`);
+        stepTimes = 0;
         setTimeout(autoProcreation, 1e3);
     }
     autoProcreation();
