@@ -368,7 +368,13 @@ class mlModel{
 }
 function newDuck(){
     var model = mlModel.random([11, 1, 6]);
-    return(model.pack());
+    var duck = {
+        id: undefined, 
+        arguments: model.pack(), 
+        score: 0, 
+        executed: false
+    }
+    return(duck);
 }
 function mlduck_main(){
     /* basic */
@@ -422,12 +428,7 @@ function mlduck_main(){
         generationList[generationIndex] = generationList[generationIndex] || [];
         var generation = generationList[generationIndex];
         for(let i = 0 ;i < duckNum; i++){
-            generation.push({
-                id: undefined, 
-                arguments: newDuck(), 
-                score: 0, 
-                executed: false
-            });
+            generation.push(newDuck());
         }
     }
 
@@ -566,9 +567,10 @@ function mlduck_main(){
             Qf = !1
         }, 0))
     }
-    randomGeneration(0, 10);
+    randomGeneration(0, 2);
     runGeneration(0);
     function autoProcreation(){
+        console.log(getProgress(), getProgress() == 1);
         if(getProgress() == 1){
             // console.table(generationList[0].map(duckData => duckData.score));
             procreationGeneration(10, 0, true);
