@@ -569,12 +569,15 @@ function mlduck_main(){
     }
     randomGeneration(0, 2);
     runGeneration(0);
+    window.mlGenerationNumNow = 1;
     function autoProcreation(){
         console.log(getProgress(), getProgress() == 1);
         if(getProgress() == 1){
             // console.table(generationList[0].map(duckData => duckData.score));
             procreationGeneration(10, 0, true);
             runGeneration(0);
+            window.mlGenerationNumNow += 1;
+            console.clear();
         }
         setTimeout(autoProcreation, 1e3);
     }
