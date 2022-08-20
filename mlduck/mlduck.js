@@ -1,5 +1,9 @@
 'use strict';
 
+const ML_DIR_PATH = 'mlduck';
+const ML_DEBUG_MODE = true;
+const ML_EXECUTION_SPEED = 2; // 0 ~ 2
+
 let code_duckRobot = `
 /*
  * 2022 © MaoHuPi
@@ -58,160 +62,7 @@ duckRobot(360, 20, true);
 
 let code_mlDuck = `
 const mlIdList = [];
-class mlBasic{
-    // static idList = [];
-    static getArg(args = {}, argName = '', defaultValue = false){
-        return(argName in args ? args[argName] : defaultValue);
-    }
-    static randint(a, b){
-        return(Math.floor(mlBasic.randfloat(a, b)));
-    }
-    static randfloat(a, b){
-        var min = Math.min(a, b);
-        var max = Math.max(a, b);
-        return(min + Math.random()*(max - min));
-    }
-    static pick(list){
-        return(list[mlBasic.randint(0, list.length - 1)]);
-    }
-    static randid(length = 10, range = [[48, 57], [65, 90], [97, 122]]){ // a~b 包含b
-        let charCodeList = [];
-        let output = undefined;
-        for(let r of range){
-            if(typeof r == 'object' && r.length > 0){
-                var min = Math.min(...r);
-                var max = Math.max(...r);
-                for(let charCode = min; charCode <= max; charCode++){
-                    charCodeList.push(charCode);
-                }
-            }
-        }
-        // while(output == undefined || (typeof output == 'string' && mlBasic.idList.indexOf(output) > -1)){
-        while(output == undefined || (typeof output == 'string' && mlIdList.indexOf(output) > -1)){
-            output = [];
-            for(let i = 0; i < length; i++){
-                output[i] = mlBasic.pick(charCodeList);
-            }
-            output = String.fromCharCode(...output);
-        }
-        // mlBasic.idList.push(output);
-        mlIdList.push(output);
-        return(output);
-    }
-    static sigmoid(x, k = 10) {
-        return 1 / (1 + Math.exp(-x/k));
-    }
-}
-class mlPoint{
-    constructor(args = {}){
-        this.id = mlBasic.randid(5);
-        this.activation = mlBasic.getArg(args, 'activation', mlBasic.sigmoid);
-        this.outputs = mlBasic.getArg(args, 'output', []);
-        this.value = mlBasic.getArg(args, 'value', 0);
-    }
-    send(){
-        this.value = this.activation(this.value);
-        for(let line of this.outputs){
-            line.transportation(this.value);
-        }
-    }
-    connect(point, gate = 0.5){
-        this.outputs.push(new mlLine({gate: gate, output: point}));
-    }
-    pack(){
-        return({id: this.id, outputs: this.outputs.map(line => line.pack())});
-    }
-}
-class mlLine{
-    constructor(args = {}){
-        this.gate = mlBasic.getArg(args, 'gate', 0.5);
-        this.output = mlBasic.getArg(args, 'output', null);
-    }
-    transportation(value = 0){
-        if(this.output){
-            this.output.value = value*this.gate;
-        }
-    }
-    pack(){
-        return({gate: this.gate, output: this.output.id});
-    }
-}
-class mlModel{
-    constructor(args = {}){
-        this.architecture = mlBasic.getArg(args, 'architecture', [1, 2, 1]);
-        this.layers = [];
-        this.init(false);
-    }
-    init(autoConnect = false){
-        this.layers = [];
-        for(let layerIndex = 0; layerIndex < this.architecture.length; layerIndex++){
-            this.layers[layerIndex] = this.layers[layerIndex] || [];
-            for(let pointIndex = 0; pointIndex < this.architecture[layerIndex]; pointIndex++){
-                let pointNow = new mlPoint();
-                this.layers[layerIndex][pointIndex] = pointNow;
-                if(autoConnect && layerIndex - 1 > -1){
-                    this.layers[layerIndex - 1].forEach(point => {
-                        // 暫時先全部連接並隨機gate
-                        point.connect(pointNow, mlBasic.randfloat(0, 1));
-                    });
-                }
-            }
-        }
-    }
-    calculate(...inputs){
-        this.layers[0].map((point, i) => {
-            point.value = inputs.length > i ? inputs[i] : point.value;
-        });
-        for(let layer of this.layers){
-            for(let point of layer){
-                point.send();
-            }
-        }
-        var output = this.layers[this.layers.length - 1].map(point => point.value);
-        return(output);
-    }
-    pack(){
-        return({layers: this.layers.map(layer => layer.map(point => point.pack()))});
-    }
-    static load(data = {}){
-        let modle = new mlModel();
-        var layers = mlBasic.getArg(data, 'layers', false);
-        if(layers){
-            var architecture = layers.map(layer => layer.length);
-            modle.architecture = architecture;
-            modle.init(false);
-            for(let layerIndex = 0; layerIndex < modle.layers.length; layerIndex++){
-                for(let pointIndex = 0; pointIndex < modle.layers[layerIndex].length; pointIndex++){
-                    modle.layers[layerIndex][pointIndex].id = layers[layerIndex][pointIndex].id;
-                }
-            }
-            for(let layerIndex = 0; layerIndex < modle.layers.length; layerIndex++){
-                for(let pointIndex = 0; pointIndex < modle.layers[layerIndex].length; pointIndex++){
-                    if(layerIndex + 1 < modle.layers.length){
-                        let point = modle.layers[layerIndex][pointIndex];
-                        let outputsId = layers[layerIndex][pointIndex].outputs.map(line => line.output);
-                        for(let point2 of modle.layers[layerIndex + 1]){
-                            let outputIndex = outputsId.indexOf(point2.id);
-                            if(outputIndex > -1){
-                                point.connect(point2, layers[layerIndex][pointIndex].outputs[outputIndex].gate);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        return(modle);
-    }
-    static random(architecture){
-        let modle = new mlModel({architecture: architecture});
-        modle.init(true);
-        return(modle);
-    }
-}
 `;
-
-const ML_DIR_PATH = 'mlduck';
-const ML_DEBUG_MODE = false;
 
 const mlIdList = [];
 class mlBasic{
@@ -254,7 +105,7 @@ class mlBasic{
         mlIdList.push(output);
         return(output);
     }
-    static sigmoid(x, k = 10) {
+    static sigmoid(x, k = 0.2) {
         return 1 / (1 + Math.exp(-x/k));
     }
     static count(array = [], value = ''){
@@ -315,7 +166,7 @@ class mlModel{
                 if(autoConnect && layerIndex - 1 > -1){
                     this.layers[layerIndex - 1].forEach(point => {
                         // 暫時先全部連接並隨機gate
-                        point.connect(pointNow, parseFloat(mlBasic.randfloat(0, 2).toFixed(2)));
+                        point.connect(pointNow, parseFloat(mlBasic.randfloat(-10, 10).toFixed(2)));
                     });
                 }
             }
@@ -371,6 +222,11 @@ class mlModel{
         return(modle);
     }
 }
+
+[mlBasic, mlPoint, mlLine, mlModel].forEach(mlClass => { // 將ml類別放入code_mlDuck中
+    code_mlDuck += `${mlClass.toString()}\n`;
+});
+
 function newDuck(){
     var model = mlModel.random([11, 10, 6]);
     var duck = {
@@ -543,6 +399,7 @@ function mlduck_main(){
     function run(generationIndex = 0, duckNum = 0, doneFunction = () => {}){
         let duckData = generationList[generationIndex][duckNum];
         window.mlDuckNow = mlModel.load(duckData.arguments);
+
         var myCode = code_mlDuck + `
     let scanDeg = 0;
     let swimDeg = 0;
@@ -554,17 +411,17 @@ function mlduck_main(){
     // let duck = eval('new mlModel({architecture: [1, 6]})');
     function mlCalculate(){
         let response = duck.calculate(
-            getX(), 
-            getY(), 
-            scanDeg, 
-            scan(scanDeg), 
-            swimDeg, 
-            isSwimming, 
-            damage(), 
-            health(), 
-            speed(), 
-            cannonDeg, 
-            cannonRange
+            getX()/100, 
+            getY()/100, 
+            scanDeg/360, 
+            scan(scanDeg)/100, 
+            swimDeg/360, 
+            isSwimming ? 1 : 0, 
+            damage()/100, 
+            health()/100, 
+            speed()/1, 
+            cannonDeg/360, 
+            cannonRange/100
         );
         scanDeg = Math.floor(response[0] * 360);
         swimDeg = Math.floor(response[1] * 360);
@@ -656,6 +513,19 @@ function mlduck_main(){
     if(!ML_DEBUG_MODE){
         console.warn = () => {};
         console.error = () => {};
+    }
+
+    T.update = function(){
+        T.$K();
+        T.aL();
+        T.ZK();
+        T.$c.length <= T.$q.length + 1 && (T.bs = Math.min(T.bs, Date.now() + 1E3));
+        for(let i = 0; i < 2; i++){
+            if(T.$c[0].oC){
+                T.$c[0].oC.step();
+            }
+        }
+        Date.now() > T.bs ? T.stop() : T.eD = setTimeout(T.update, 1E3 / ML_EXECUTION_SPEED / T.mF)
     }
 
     // $('#docsButton').removeEventListener('click', Ue, true); // 移除click監聽器
