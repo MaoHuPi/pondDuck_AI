@@ -44,7 +44,7 @@ log(any) 印出
 
 ## TODO
 - [x] 因為場地為非同步執行，導致AI鴨無法在一幀內完成運算(需研究「pond/duck/generated/en/compressed.js」到底在寫三小)
-- [ ] 待研究：「third-party\JS-Interpreter\compressed.js」第1539行的「Interpreter.prototype.step」實際執行方式(造成執行延遲的原因)
+- [ ] 待研究：「third-party/JS-Interpreter/compressed.js」第1539行的「Interpreter.prototype.step」實際執行方式(造成執行延遲的原因)
 
 # NOTE
 * `$e();` 運行程式
@@ -54,3 +54,4 @@ log(any) 印出
 * `Ae(T.$c[0]);` 讓鴨子進入死亡狀態($c後的索引值為要殺死的鴨子)
 * `T.$c[0].FH` 鴨子compiled後的code
 * `T.$c[0].Pf` 鴨子是否死亡
+* 「third-party/JS-Interpreter/compressed.js」的「Interpreter」原始碼為「[NeilFraser > JS-Interpreter/interpreter.js](https://github.com/NeilFraser/JS-Interpreter/blob/master/interpreter.js)」

@@ -312,7 +312,7 @@ class mlModel{
                 if(autoConnect && layerIndex - 1 > -1){
                     this.layers[layerIndex - 1].forEach(point => {
                         // 暫時先全部連接並隨機gate
-                        point.connect(pointNow, parseFloat(mlBasic.randfloat(0, 1).toFixed(2)));
+                        point.connect(pointNow, parseFloat(mlBasic.randfloat(0, 2).toFixed(2)));
                     });
                 }
             }
@@ -369,7 +369,7 @@ class mlModel{
     }
 }
 function newDuck(){
-    var model = mlModel.random([11, 1, 6]);
+    var model = mlModel.random([11, 10, 6]);
     var duck = {
         id: undefined, 
         arguments: model.pack(), 
@@ -532,22 +532,19 @@ function mlduck_main(){
         }
     }
     while(true){
-        mlCalculate();
+        eval('mlCalculate()');
     }
         `;
         be().setValue(myCode); // 設定ace editor內容
         window.Ye(new Event('click', {"bubbles":true, "cancelable":false})); // 運行程式
-        setTimeout(() => {
-            for(let i = 0; i < 100; i++){
-                // console.log(window.T.$c[0]);
-                window.T.$c[0].oC.run();
-            }
-        }, 0.1e3);
+        // T.$c[0].oC = new Interpreter(myCode, T.$c[0].FH.Si.Ow); // 設定player的code
+        accelerate();
         reset(doneFunction);
     }
 
     function reset(doneFunction = () => {}){
-        if(T.$c[0].Pf){
+        if(T.$c[0].Pf || T.$c.length - T.$q.length <= 1){
+            T.$c[0].oC.paused_ = true;
             af(new Event('click', {"bubbles":true, "cancelable":false}));
             if(doneFunction){
                 setTimeout(doneFunction, 1e3); // 之所以等待1秒，是因為af需要處裡時間
@@ -555,6 +552,15 @@ function mlduck_main(){
         }
         else{
             setTimeout(reset, 1e3, doneFunction);
+        }
+    }
+
+    async function accelerate(){
+        // console.log(window.T.$c[0]);
+        // window.T.$c[0].oC.run();
+        if(window.T.$c[0].oC){
+            await window.T.$c[0].oC.run();
+            // window.T.$c[0].oC.run();
         }
     }
 
@@ -569,11 +575,11 @@ function mlduck_main(){
             Qf = !1
         }, 0))
     }
-    randomGeneration(0, 2);
+
+    randomGeneration(0, 10);
     runGeneration(0);
     window.mlGenerationNumNow = 1;
     function autoProcreation(){
-        console.log(getProgress(), getProgress() == 1);
         if(getProgress() == 1){
             // console.table(generationList[0].map(duckData => duckData.score));
             procreationGeneration(10, 0, true);
@@ -581,11 +587,10 @@ function mlduck_main(){
             window.mlGenerationNumNow += 1;
             console.clear();
         }
-        $('#docsButton').innerText = (`stepTimes: ${stepTimes}`);
-        stepTimes = 0;
         setTimeout(autoProcreation, 1e3);
     }
     autoProcreation();
 }
 setTimeout(mlduck_main, 1e3);
 // copy(JSON.stringify(mlGenerationList, true, 4));
+// 16000

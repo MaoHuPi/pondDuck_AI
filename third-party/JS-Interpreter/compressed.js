@@ -1536,9 +1536,7 @@ Interpreter.prototype.appendCode = function(b) {
     a.done = !1
 }
 ;
-let stepTimes = 0;
 Interpreter.prototype.step = function() {
-    stepTimes++;
     var b = this.stateStack
       , a = Date.now() + this.POLYFILL_TIMEOUT;
     do {
