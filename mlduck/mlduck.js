@@ -256,7 +256,7 @@ function mlduck_main(){
     const vh = function(){return(document.body.offsetHeight/100);};
     const codeTextarea = $('textarea.ace_text-input');
     const generationList = window.mlGenerationList = [];
-    const dataLogElement = document.createElement('tbody');
+    const dataLogElement = document.createElement('td');
     const canvasBox = $('#visualization');
     const displayCanvas = $('canvas#display');
     const mlCanvas = document.createElement('canvas');
@@ -575,7 +575,11 @@ function mlduck_main(){
         canvas.style.top = '0px';
     }
     // dataLogElement.style.fontSize = '10px';
-    $('#avatarStatTable~table').appendChild(dataLogElement);
+    var dataLogTBody = document.createElement('tbody');
+    dataLogElement.setAttribute('colspan', 2);
+    dataLogElement.style.overflowWrap = 'anywhere';
+    dataLogTBody.appendChild(dataLogElement);
+    $('#avatarStatTable~table').appendChild(dataLogTBody);
     dataLogAdd('[mlduck] 2022 © MaoHuPi', false);
     dataLogUpdate();
 
@@ -635,7 +639,7 @@ function mlduck_main(){
         function autoProcreation(){
             if(getProgress() == 1){
                 // console.table(generationList[0].map(duckData => duckData.score));
-                procreationGeneration(10, 0, true);
+                procreationGeneration(100, 0, true);
                 runGeneration(0);
                 window.mlGenerationNumNow += 1;
                 console.clear();
@@ -659,7 +663,7 @@ function mlduck_main(){
             runAll();
         }
         else{
-            randomGeneration(0, 10);
+            randomGeneration(0, 100);
             window.mlGenerationNumNow = 1;
             runAll();
         }
