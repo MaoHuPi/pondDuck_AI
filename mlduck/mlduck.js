@@ -1,8 +1,8 @@
 'use strict';
 
 const ML_DIR_PATH = 'mlduck';
-const ML_DEBUG_MODE = true;
-const ML_EXECUTION_SPEED = 2; // 0 ~ 2
+const ML_DEBUG_MODE = false;
+const ML_EXECUTION_SPEED = 10; // 0 ~ 2
 
 let code_duckRobot = `
 /*
@@ -247,9 +247,14 @@ function mlduck_main(){
     /* basic */
     const $ = function(c, f = document){return(f.querySelector(c));};
     const $$ = function(c, f = document){return(f.querySelectorAll(c));};
+    const vw = function(){return(document.body.offsetWidth/100);};
+    const vh = function(){return(document.body.offsetHeight/100);};
     const codeTextarea = $('textarea.ace_text-input');
     const generationList = window.mlGenerationList = [];
     const dataLogElement = document.createElement('tbody');
+    const canvasBox = $('#visualization');
+    const displayCanvas = $('canvas#display');
+    const mlCanvas = document.createElement('canvas');
     let updateTimeDelta = 0;
     let lastUpdateTime = mlBasic.time();
     let dataLogText = '';
@@ -324,6 +329,15 @@ function mlduck_main(){
         }
     };
 
+    function dataLogAdd(text, showName = true){
+        dataLogText += (showName ? `[${T.kf.name}]` : '') + ` ${text}\n`;
+    }
+
+    function dataLogUpdate(){
+        dataLogElement.innerText = dataLogText;
+        dataLogText = '';
+    }
+
     function sendXmlhttp(name = '', value = '', responseFunction = t => {console.log(t);}, type = 'get'){
         let xmlhttp = new XMLHttpRequest();
         let rf = function (){
@@ -342,6 +356,21 @@ function mlduck_main(){
             xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
             xmlhttp.send(value);
         }
+    }
+
+    function offset(e, type) {
+        var reE = {
+            height:e.offsetHeight, 
+            width:e.offsetWidth , 
+            top:0, 
+            left:0
+        };
+        while(e !== document.body && e.offsetLeft && e.offsetTop && e.offsetParent){
+            reE.left += e.offsetLeft;
+            reE.top += e.offsetTop;
+            e = e.offsetParent;
+        }
+        return(reE[type]);
     }
 
     /* generation */
@@ -470,16 +499,9 @@ function mlduck_main(){
             };
             a.setProperty(c, "log", a.createNativeFunction(d));
 
-            d = function(e) {
-                dataLogText += `[${T.kf.name}] ${e}\n`;
-            };
-            a.setProperty(c, "dataLogAdd", a.createNativeFunction(d));
+            a.setProperty(c, "dataLogAdd", a.createNativeFunction(dataLogAdd));
 
-            d = function() {
-                dataLogElement.innerText = dataLogText;
-                dataLogText = '';
-            };
-            a.setProperty(c, "dataLogUpdate", a.createNativeFunction(d));
+            a.setProperty(c, "dataLogUpdate", a.createNativeFunction(dataLogUpdate));
 
             d = function() { // clearLog
                 if(!ML_DEBUG_MODE){
@@ -488,8 +510,7 @@ function mlduck_main(){
             };
             a.setProperty(c, "clearLog", a.createNativeFunction(d));
             
-            d = getProgress // getProgress
-            a.setProperty(c, "getProgress", a.createNativeFunction(d));
+            a.setProperty(c, "getProgress", a.createNativeFunction(getProgress));
         };
 
         // Object.getPrototypeOf($('#display').getContext("2d")).fill = () => {console.log(this)}
@@ -518,9 +539,33 @@ function mlduck_main(){
         console.warn = () => {};
         console.error = () => {};
     }
+    else{
+        console.clear = () => {};
+    }
 
-    dataLogElement.style.fontSize = '10px';
+    canvasBox.style.setProperty('--size', 'calc(min(1vw, 1vh) * 100 - 10px)');
+    canvasBox.style.width = 'var(--size)';
+    canvasBox.style.height = 'var(--size)';
+    canvasBox.style.position = 'fixed';
+    canvasBox.style.right = '5px';
+    canvasBox.style.bottom = '5px';
+    canvasBox.style.opacity = '0.5';
+    canvasBox.style.boxSizing = 'border-box';
+    // canvasBox.style.pointerEvents = 'none';
+    canvasBox.style.zIndex = '999';
+    canvasBox.appendChild(mlCanvas);
+    for(let canvas of [displayCanvas, mlCanvas]){
+        canvas.style.setProperty('--size', 'calc(min(1vw, 1vh) * 100 - 10px)');
+        canvas.style.width = 'var(--size)';
+        canvas.style.height = 'var(--size)';
+        canvas.style.position = 'absolute';
+        canvas.style.left = '0px';
+        canvas.style.top = '0px';
+    }
+    // dataLogElement.style.fontSize = '10px';
     $('#avatarStatTable~table').appendChild(dataLogElement);
+    dataLogAdd('[mlduck] 2022 © MaoHuPi', false);
+    dataLogUpdate();
 
     T.update = function(){
         T.$K();
@@ -542,6 +587,19 @@ function mlduck_main(){
         docsButton.replaceWith(docsButton.cloneNode()); // 利用元素替換來移除所有監聽器
     }
     Ne = functionAdd(Ne, function(){ // 將FPS計數器接至canvas更新函式後
+        let colors = ['yellow', 'red', 'green', 'blue'];
+        let ctx = mlCanvas.getContext('2d');
+        // let ctx = g.g.o.Br;
+        let rectSize = {width: 50, height: 5};
+        ctx.clearRect(0, 0, mlCanvas.width, mlCanvas.height);
+        for(let i = 0; i < T.$c.length; i++){
+            let duck = T.$c[i];
+            ctx.fillStyle = colors[i];
+            ctx.strokeStyle = 'black';
+            ctx.fillRect(duck.Wa.x/100*mlCanvas.width - rectSize.width/2, mlCanvas.height-(duck.Wa.y/100*mlCanvas.height) - rectSize.height/2 - 15, rectSize.width*(100 - duck.Of)/100, rectSize.height);
+            ctx.strokeRect(duck.Wa.x/100*mlCanvas.width - rectSize.width/2, mlCanvas.height-(duck.Wa.y/100*mlCanvas.height) - rectSize.height/2 - 15, rectSize.width, rectSize.height);
+        }
+        // ctx.fillStyle = '#0000ff';
         (window.mlCountFPS && window.mlCountFPS());
     });
 
