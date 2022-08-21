@@ -524,8 +524,12 @@ function mlduck_main(){
         };
 
         // Object.getPrototypeOf($('#display').getContext("2d")).fill = () => {console.log(this)}
-        // CanvasRenderingContext2D.prototype.fill = () => {console.log(this)}
-
+        CanvasRenderingContext2D.prototype.fill = functionAdd(function(){
+            if(this.fillStyle == "#527dbf"){
+                this.fillStyle = "#527dbf22";
+            }
+        }, CanvasRenderingContext2D.prototype.fill);
+        
         window.Ye(new Event('click', {"bubbles":true, "cancelable":false})); // 運行程式
         // T.$c[0].oC = new Interpreter(myCode, T.$c[0].Si.Ow); // 重建Interpreter，會因為myCode未經compile而導致鴨子不會動
         reset(doneFunction);
@@ -561,7 +565,7 @@ function mlduck_main(){
     canvasBox.style.bottom = '5px';
     canvasBox.style.opacity = '0.5';
     canvasBox.style.boxSizing = 'border-box';
-    // canvasBox.style.pointerEvents = 'none';
+    canvasBox.style.pointerEvents = 'none';
     canvasBox.style.zIndex = '999';
     mlCanvas.width = 400;
     mlCanvas.height = 400;
@@ -623,8 +627,66 @@ function mlduck_main(){
         (window.mlCountFPS && window.mlCountFPS());
     });
 
+    T.ZK = function(){
+        for (var a = 0, c; c = T.$c[a]; a++)
+            if (!c.Pf && (c.speed < c.Ag ? c.speed = Math.min(c.speed + T.$y, c.Ag) : c.speed > c.Ag && (c.speed = Math.max(c.speed - T.$y, c.Ag)),
+            0 < c.speed)) {
+                var d = T.VA(c)
+                  , e = d[1]
+                  , f = g.g.Sa.Cd(c.Ah)
+                  , h = c.speed / 100 * T.kE
+                  , k = Math.cos(f) * h;
+                h *= Math.sin(f);
+                c.Wa.x += k;
+                c.Wa.y += h;
+                if(c.Wa.x < 0){ // 場地溢出循環
+                    c.Wa.x += 100;
+                }
+                if(c.Wa.x > 100){
+                    c.Wa.x -= 100;
+                }
+                if(c.Wa.y < 0){
+                    c.Wa.y += 100;
+                }
+                if(c.Wa.y > 100){
+                    c.Wa.y -= 100;
+                }
+                0 > c.Wa.x || 100 < c.Wa.x || 0 > c.Wa.y || 100 < c.Wa.y ? (c.Wa.x = g.g.Sa.ug(c.Wa.x, 0, 100),
+                c.Wa.y = g.g.Sa.ug(c.Wa.y, 0, 100),
+                e = c.speed / 100 * T.Qt,
+                ze(c, e),
+                c.speed = 0,
+                c.Ag = 0,
+                T.lg.push({
+                    type: "CRASH",
+                    avatar: c,
+                    damage: e
+                })) : (d = T.VA(c),
+                f = d[0],
+                d = d[1],
+                d < T.wE && e > d && (c.Wa.x -= k,
+                c.Wa.y -= h,
+                e = Math.max(c.speed, f.speed) / 100 * T.Qt,
+                ze(c, e),
+                c.speed = 0,
+                c.Ag = 0,
+                ze(f, e),
+                f.speed = 0,
+                f.Ag = 0,
+                T.lg.push({
+                    type: "CRASH",
+                    avatar: c,
+                    damage: e
+                }, {
+                    type: "CRASH",
+                    avatar: f,
+                    damage: e
+                })))
+            }
+    };
+
     window.Uf(1); // 切換至JavaScript輸入
-    if (!Qf) { // Vf(); // 啟用JavaScript編輯
+    if(!Qf){ // Vf(); // 啟用JavaScript編輯
         var a = Od ? Nd.getValue() : Xe();
         Od ? a.trim() || (w.clear(),
         Tf(!1)) : true ? Tf(!0) : (Qf = !0,
