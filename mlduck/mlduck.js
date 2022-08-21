@@ -105,7 +105,7 @@ class mlBasic{
         mlIdList.push(output);
         return(output);
     }
-    static sigmoid(x, k = 0.2) {
+    static sigmoid(x, k = 0.2){
         return 1 / (1 + Math.exp(-x/k));
     }
     static count(array = [], value = ''){
@@ -123,8 +123,10 @@ class mlPoint{
         this.outputs = mlBasic.getArg(args, 'output', []);
         this.value = mlBasic.getArg(args, 'value', 0);
     }
-    send(){
-        this.value = this.activation(this.value);
+    send(toActivation = true){
+        if(toActivation){
+            this.value = this.activation(this.value);
+        }
         for(let line of this.outputs){
             line.transportation(this.value);
         }
@@ -178,7 +180,11 @@ class mlModel{
         });
         for(let layer of this.layers){
             for(let point of layer){
-                point.send();
+                var toActivation = true;
+                // if(layer != this.layers.length - 1){
+                //     toActivation = false;
+                // }
+                point.send(toActivation);
             }
         }
         var output = this.layers[this.layers.length - 1].map(point => point.value);
@@ -243,8 +249,10 @@ function mlduck_main(){
     const $$ = function(c, f = document){return(f.querySelectorAll(c));};
     const codeTextarea = $('textarea.ace_text-input');
     const generationList = window.mlGenerationList = [];
+    const dataLogElement = document.createElement('tbody');
     let updateTimeDelta = 0;
     let lastUpdateTime = mlBasic.time();
+    let dataLogText = '';
 
     function findUnexecute(generationIndex = 0){
         let unexecuteIndex = undefined;
@@ -258,14 +266,17 @@ function mlduck_main(){
         return(unexecuteIndex);
     }
 
-    function getProgress(toLog = false){
+    function getProgress(toLog = false, toReturnProgressBar = false, darkTheme = true){
         var progressList = generationList[0].map(duckData => duckData.executed);
         var doneNum = mlBasic.count(progressList, true);
         var totalNum = progressList.length;
+        var progressBar = new Array(doneNum).fill('🟩').join('') + new Array(totalNum - doneNum).fill(darkTheme ? '⬜' : '⬛').join('');
         if(toLog){
-            var progressBar = new Array(doneNum).fill('🟩').join('') + new Array(totalNum - doneNum).fill('⬜').join('');
             // console.table(progressList);
             console.log(`${doneNum}/${totalNum} | ${progressBar}`);
+        }
+        if(toReturnProgressBar){
+            return(progressBar);
         }
         return(doneNum != totalNum ? doneNum/totalNum : 1);
     }
@@ -350,8 +361,8 @@ function mlduck_main(){
                 generationList[gi][di].executed = true;
                 generationList[gi][di].score = mlBasic.time() - st;
 
-                // getProgress(true);
-                // console.table(generationList[0].map(duckData => duckData.score));
+                getProgress(true);
+                console.table(generationList[0].map(duckData => duckData.score));
 
                 sendXmlhttp(ML_DIR_PATH + '/write.php', `json=${JSON.stringify({generationList: generationList, generationNumNow: window.mlGenerationNumNow}, true, 4)}`, r => {
                     console.log(`data write: ${r}`);
@@ -430,18 +441,17 @@ function mlduck_main(){
         cannonDeg = Math.floor(response[3] * 360);
         cannonRange = Math.floor(response[4] * 100);
         toCannon = response[5] > 0.5 ? true : false;
-        clearLog();
-        getProgress(true);
         ['scanDeg', 'swimDeg', 'cannonDeg', 'cannonRange', 'isSwimming', 'toCannon'].forEach(n => {
-            log(\`\${n}: \${eval(n)}\`);
+            dataLogAdd(\`\${n}: \${eval(n)}\`);
         });
+        dataLogAdd(getProgress(false, true, false));
+        dataLogUpdate();
         if(isSwimming){
             swim(swimDeg);
         }
         else{
             stop();
         }
-        log(getX());
         if(toCannon){
             cannon(cannonDeg, cannonRange);
         }
@@ -453,18 +463,23 @@ function mlduck_main(){
         be().setValue(myCode); // 設定ace editor內容
 
         let oldFunction = T.$c[0].Si.Ow;
-        let mlObjects = {mlBasic: mlBasic, mlPoint: mlPoint, mlLine: mlLine, mlModel: mlModel, newDuck: newDuck}
-        T.$c[0].Si.Ow = function(a, c, mlObj = mlObjects){ // 改寫、複寫 T.$c[0].Si.Ow 補充函式
+        T.$c[0].Si.Ow = function(a, c){ // 改寫、複寫 T.$c[0].Si.Ow 補充函式
             oldFunction.bind(this)(a, c);
             let d = function(e) {
                 console.log(`${T.kf.name} logs: ${e}`);
             };
             a.setProperty(c, "log", a.createNativeFunction(d));
 
-            // for(let name in mlObj){
-            //     d = (...arg) => {return(mlObj[name])};
-            //     a.setProperty(c, name, a.createNativeFunction(d));
-            // }
+            d = function(e) {
+                dataLogText += `[${T.kf.name}] ${e}\n`;
+            };
+            a.setProperty(c, "dataLogAdd", a.createNativeFunction(d));
+
+            d = function() {
+                dataLogElement.innerText = dataLogText;
+                dataLogText = '';
+            };
+            a.setProperty(c, "dataLogUpdate", a.createNativeFunction(d));
 
             d = function() { // clearLog
                 if(!ML_DEBUG_MODE){
@@ -482,13 +497,11 @@ function mlduck_main(){
 
         window.Ye(new Event('click', {"bubbles":true, "cancelable":false})); // 運行程式
         // T.$c[0].oC = new Interpreter(myCode, T.$c[0].Si.Ow); // 重建Interpreter，會因為myCode未經compile而導致鴨子不會動
-        accelerate();
         reset(doneFunction);
     }
 
     function reset(doneFunction = () => {}){
         if(T.$c[0].Pf || T.$c.length - T.$q.length <= 1){
-            T.$c[0].oC.paused_ = true;
             af(new Event('click', {"bubbles":true, "cancelable":false}));
             if(doneFunction){
                 setTimeout(doneFunction, 0.5e3); // 之所以等待0.5秒，是因為af需要處裡時間
@@ -499,15 +512,6 @@ function mlduck_main(){
         }
     }
 
-    async function accelerate(){
-        // console.log(window.T.$c[0]);
-        // window.T.$c[0].oC.run();
-        if(window.T.$c[0].oC){
-            await window.T.$c[0].oC.run();
-            // window.T.$c[0].oC.run();
-        }
-    }
-
     /* main */
     Audio.prototype.play = () => {};
     if(!ML_DEBUG_MODE){
@@ -515,13 +519,17 @@ function mlduck_main(){
         console.error = () => {};
     }
 
+    dataLogElement.style.fontSize = '10px';
+    $('#avatarStatTable~table').appendChild(dataLogElement);
+
     T.update = function(){
         T.$K();
         T.aL();
         T.ZK();
         T.$c.length <= T.$q.length + 1 && (T.bs = Math.min(T.bs, Date.now() + 1E3));
-        for(let i = 0; i < 2; i++){
-            if(T.$c[0].oC){
+        for(let i = 0; i < 1e4; i++){ // 加速player運算
+            T.kf = T.$c[0];
+            if(T.$c[0].oC && T.kf){
                 T.$c[0].oC.step();
             }
         }
@@ -547,6 +555,21 @@ function mlduck_main(){
             Qf = !1
         }, 0))
     }
+    
+    function runAll(){
+        runGeneration(0);
+        function autoProcreation(){
+            if(getProgress() == 1){
+                // console.table(generationList[0].map(duckData => duckData.score));
+                procreationGeneration(10, 0, true);
+                runGeneration(0);
+                window.mlGenerationNumNow += 1;
+                console.clear();
+            }
+            setTimeout(autoProcreation, 1e3);
+        }
+        autoProcreation();
+    }
 
     sendXmlhttp(ML_DIR_PATH + '/read.php', '', json => {
         let data = [];
@@ -567,21 +590,6 @@ function mlduck_main(){
             runAll();
         }
     }, 'get');
-
-    function runAll(){
-        runGeneration(0);
-        function autoProcreation(){
-            if(getProgress() == 1){
-                // console.table(generationList[0].map(duckData => duckData.score));
-                procreationGeneration(10, 0, true);
-                runGeneration(0);
-                window.mlGenerationNumNow += 1;
-                console.clear();
-            }
-            setTimeout(autoProcreation, 1e3);
-        }
-        autoProcreation();
-    }
 }
 setTimeout(mlduck_main, 1e3);
 // copy(JSON.stringify(mlGenerationList, true, 4));
