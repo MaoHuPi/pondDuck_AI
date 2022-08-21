@@ -1,3 +1,8 @@
+/*
+ * 2022 © MaoHuPi
+ * mlduck.js
+ */
+
 'use strict';
 
 const ML_DIR_PATH = 'mlduck';
@@ -255,6 +260,7 @@ function mlduck_main(){
     const canvasBox = $('#visualization');
     const displayCanvas = $('canvas#display');
     const mlCanvas = document.createElement('canvas');
+    const mlCanvasCtx = mlCanvas.getContext('2d');
     let updateTimeDelta = 0;
     let lastUpdateTime = mlBasic.time();
     let dataLogText = '';
@@ -371,6 +377,10 @@ function mlduck_main(){
             e = e.offsetParent;
         }
         return(reE[type]);
+    }
+
+    function numberCenter(num, present = 0.5){
+        return((1 - present)/2 + num*present);
     }
 
     /* generation */
@@ -553,6 +563,8 @@ function mlduck_main(){
     canvasBox.style.boxSizing = 'border-box';
     // canvasBox.style.pointerEvents = 'none';
     canvasBox.style.zIndex = '999';
+    mlCanvas.width = 400;
+    mlCanvas.height = 400;
     canvasBox.appendChild(mlCanvas);
     for(let canvas of [displayCanvas, mlCanvas]){
         canvas.style.setProperty('--size', 'calc(min(1vw, 1vh) * 100 - 10px)');
@@ -588,16 +600,20 @@ function mlduck_main(){
     }
     Ne = functionAdd(Ne, function(){ // 將FPS計數器接至canvas更新函式後
         let colors = ['yellow', 'red', 'green', 'blue'];
-        let ctx = mlCanvas.getContext('2d');
-        // let ctx = g.g.o.Br;
-        let rectSize = {width: 50, height: 5};
+        let ctx = mlCanvasCtx;
+        let rectSize = {width: 50, height: 10};
         ctx.clearRect(0, 0, mlCanvas.width, mlCanvas.height);
         for(let i = 0; i < T.$c.length; i++){
             let duck = T.$c[i];
-            ctx.fillStyle = colors[i];
             ctx.strokeStyle = 'black';
-            ctx.fillRect(duck.Wa.x/100*mlCanvas.width - rectSize.width/2, mlCanvas.height-(duck.Wa.y/100*mlCanvas.height) - rectSize.height/2 - 15, rectSize.width*(100 - duck.Of)/100, rectSize.height);
-            ctx.strokeRect(duck.Wa.x/100*mlCanvas.width - rectSize.width/2, mlCanvas.height-(duck.Wa.y/100*mlCanvas.height) - rectSize.height/2 - 15, rectSize.width, rectSize.height);
+            ctx.lineWidth = 2;
+            ctx.fillStyle = 'black';
+            let realPosition = {x: numberCenter(duck.Wa.x/100, 0.9), y: numberCenter(duck.Wa.y/100, 0.9)}
+            let rectPosition = {x: realPosition.x*mlCanvas.width - rectSize.width/2, y: mlCanvas.height-(realPosition.y*mlCanvas.height) - rectSize.height/2 - 20}
+            ctx.fillRect(rectPosition.x, rectPosition.y, rectSize.width, rectSize.height);
+            ctx.fillStyle = colors[i];
+            ctx.fillRect(rectPosition.x, rectPosition.y, rectSize.width*(100 - duck.Of)/100, rectSize.height);
+            ctx.strokeRect(rectPosition.x, rectPosition.y, rectSize.width, rectSize.height);
         }
         // ctx.fillStyle = '#0000ff';
         (window.mlCountFPS && window.mlCountFPS());
