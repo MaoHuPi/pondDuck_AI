@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script type="module" src="./mlMeow.js"></script> -->
+    <!-- <script type="module">
+    </script> -->
+</head>
+<body>
+    <script type="module">
+        // import {mlBasic, mlPoint, mlLine, mlModel, mlGeneration} from './mlMeow.js';
+        import {mlMeow} from './mlMeow.js';
+
+        window.finish = false;
+        let modelArchitecture = [1, 2, 1];
+        // let model = new mlModel.random({architecture: modelArchitecture});
+        // let model = mlMeow.mlModel.random(modelArchitecture);
+        let generationList = new mlMeow.mlGenerationList({newModel: () => {
+            return(mlMeow.mlModel.random(modelArchitecture))
+        }, runFunction: (model, modelData) => {
+            // 0: 剪刀, 1: 石頭, 2: 布
+            // let pss = (array => array[Math.floor(Math.random()*array.length)])([0, 1, 2]);
+            let pssRule = {0: 1, 1: 2, 2: 0}
+            for(key in pssRule){
+                let pssCalculate = Math.floor(model.calculate(pss/2)*2);
+                modelData.score += pssCalculate == pssRule[key] ? 10 : 2;
+            }
+            console.log(modelData.score);
+            if(modelData.score == 30){
+                window.finish = true;
+                console.log(modelData);
+            }
+        }});
+
+        generationList.randomGeneration(0, 10);
+        generationList.runGeneration(0);
+        function main(){
+            if(!window.finish){
+                generationList.procreationGeneration(10, 0, true);
+                generationList.runGeneration(0);
+                setTimeout(main, 30);
+            }
+        }
+        main();
+        // console.log(model.calculate(1));
+    </script>
+</body>
+</html>
